@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Book Appointment - Medivibe Hospital</title>
+  <link rel="stylesheet" href="medivibe.css">
+</head>
+<body>
+
+  <header class="header">
+    <div class="container">
+      <div class="header-inner">
+        <a href="about.html" class="logo">
+          <span class="logo-icon">+</span>
+          Medi<span>vibe</span>
+        </a>
+        <nav class="nav">
+          <a href="about.html">About Us</a>
+          <a href="services.html">Services</a>
+          <a href="appointment.html" class="btn-appointment">Appointment</a>
+        </nav>
+        <div class="hamburger">
+          <span></span>
+          <span></span>
+          <span></span>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <section class="page-hero">
+    <div class="container">
+      <h1>Book an Appointment</h1>
+      <div class="breadcrumb">
+        <span class="current">Appointment</span>
+      </div>
+    </div>
+  </section>
+
+  <section class="appointment-section section-padding">
+    <div class="container">
+      <div class="section-title fade-in">
+        <h2>Book an Appointment</h2>
+        <p>Schedule your visit with our specialists. Fill out the form and we'll confirm your appointment.</p>
+      </div>
+      <form class="appointment-form fade-in">
+        <div class="form-row">
+          <div class="form-group">
+            <label>Full Name</label>
+            <input type="text" placeholder="Enter your full name" required>
+          </div>
+          <div class="form-group">
+            <label>Email Address</label>
+            <input type="email" placeholder="Enter your email" required>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Phone Number</label>
+            <input type="tel" placeholder="Enter your phone number" required>
+          </div>
+          <div class="form-group">
+            <label>Department</label>
+            <select required>
+              <option value="">Select Department</option>
+              <option>Cardiology</option>
+              <option>Neurology</option>
+              <option>Dental Care</option>
+              <option>Orthopedics</option>
+              <option>Pediatrics</option>
+              <option>Ophthalmology</option>
+              <option>Pathology</option>
+              <option>Radiology</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-row">
+          <div class="form-group">
+            <label>Preferred Date</label>
+            <input type="date" required>
+          </div>
+          <div class="form-group">
+            <label>Preferred Time</label>
+            <select required>
+              <option value="">Select Time</option>
+              <option>9:00 AM - 10:00 AM</option>
+              <option>10:00 AM - 11:00 AM</option>
+              <option>11:00 AM - 12:00 PM</option>
+              <option>2:00 PM - 3:00 PM</option>
+              <option>3:00 PM - 4:00 PM</option>
+              <option>4:00 PM - 5:00 PM</option>
+            </select>
+          </div>
+        </div>
+        <div class="form-group">
+          <label>Additional Notes</label>
+          <textarea placeholder="Any specific concerns or requirements..."></textarea>
+        </div>
+        <div class="form-submit">
+          <button type="submit" class="btn btn-primary">Book Appointment</button>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="about.html" class="logo">
+            <span class="logo-icon">+</span>
+            Medi<span>vibe</span>
+          </a>
+          <p>Providing compassionate, world-class healthcare since 2001. Your health and well-being are our top priorities.</p>
+        </div>
+        <div>
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="about.html">About Us</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="appointment.html">Appointment</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Our Services</h4>
+          <ul>
+            <li><a href="#">Cardiology</a></li>
+            <li><a href="#">Neurology</a></li>
+            <li><a href="#">Orthopedics</a></li>
+            <li><a href="#">Pediatrics</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact Info</h4>
+          <ul class="footer-contact">
+            <li><span class="fc-icon">📍</span> 123 Healthcare Ave, Medical City</li>
+            <li><span class="fc-icon">📞</span> +1 (555) 123-4567</li>
+            <li><span class="fc-icon">✉️</span> info@medivibehospital.com</li>
+          </ul>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2024 Medivibe Hospital. All rights reserved.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="medivibe.js"></script>
+</body>
+</html>
