@@ -8,7 +8,27 @@ document.addEventListener('DOMContentLoaded', function () {
   initQuoteForm();
   initServiceMenu();
   initBrochures();
+  initDoctorsDetails();
 });
+
+function initDoctorsDetails() {
+  var grid = document.getElementById('doctors-grid');
+  if (!grid) return;
+  window.addEventListener('hashchange', applyDoctorsDetails);
+  applyDoctorsDetails();
+}
+
+function applyDoctorsDetails() {
+  var grid = document.getElementById('doctors-grid');
+  if (!grid) return;
+  var inDetails = window.location.hash === '#details';
+  grid.classList.toggle('details-mode', inDetails);
+  if (inDetails) {
+    setTimeout(function () {
+      grid.scrollIntoView({ behavior: 'smooth' });
+    }, 50);
+  }
+}
 
 function initMobileNav() {
   const hamburger = document.querySelector('.hamburger');
@@ -20,8 +40,23 @@ function initMobileNav() {
     nav.classList.toggle('open');
   });
 
+  nav.querySelectorAll('.nav-dropdown-toggle').forEach(function (toggle) {
+    toggle.addEventListener('click', function (e) {
+      e.preventDefault();
+      var parent = this.parentElement;
+      var wasOpen = parent.classList.contains('open');
+      nav.querySelectorAll('.nav-dropdown.open').forEach(function (d) {
+        d.classList.remove('open');
+      });
+      if (!wasOpen) {
+        parent.classList.add('open');
+      }
+    });
+  });
+
   document.querySelectorAll('.nav a').forEach(function (link) {
     link.addEventListener('click', function () {
+      if (this.classList.contains('nav-dropdown-toggle')) return;
       hamburger.classList.remove('active');
       nav.classList.remove('open');
     });
@@ -133,7 +168,7 @@ function initAppointmentForm() {
 
     setTimeout(function () {
       btn.textContent = 'Appointment Booked!';
-      btn.style.background = '#2ec4b6';
+      btn.style.background = '#0dcaf0';
       form.reset();
 
       setTimeout(function () {
@@ -159,7 +194,7 @@ function initQuoteForm() {
 
       setTimeout(function () {
         btn.textContent = 'Quote Sent!';
-        btn.style.background = '#2ec4b6';
+        btn.style.background = '#0dcaf0';
         form.reset();
 
         setTimeout(function () {

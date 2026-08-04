@@ -1,24 +1,71 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Our Services - Medivibe Hospital</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
   <link rel="stylesheet" href="medivibe.css">
 </head>
 <body>
+
+  <div class="top-bar">
+    <div class="container">
+      <div class="top-inner">
+        <div class="top-contact">
+          <a href="mailto:info@medivibehospital.com"><i class="fa-regular fa-envelope"></i> info@medivibehospital.com</a>
+          <a href="tel:+5551234567"><i class="fa-solid fa-mobile-screen"></i> +(555) 123-4567</a>
+        </div>
+        <div class="social-icons">
+          <a href="#" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+          <a href="#" aria-label="Twitter"><i class="fa-brands fa-twitter"></i></a>
+          <a href="#" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+          <a href="#" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+        </div>
+      </div>
+    </div>
+  </div>
 
   <header class="header">
     <div class="container">
       <div class="header-inner">
         <a href="index.html" class="logo">
-          <span class="logo-icon">+</span>
-          Medi<span>vibe</span>
+          <img src="images/logo.png" alt="MediVibe Logo" class="nav-logo">
         </a>
         <nav class="nav">
-          <a href="about.html">About Us</a>
-          <a href="services.html" class="active">Services</a>
-          <a href="appointment.html" class="btn-appointment">Appointment</a>
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <div class="nav-dropdown">
+            <a href="#" class="nav-dropdown-toggle active">Services <i class="fa-solid fa-plus dropdown-icon"></i></a>
+            <div class="nav-dropdown-menu">
+              <a href="services.html">Services</a>
+              <a href="services.html#services-details">Services Details</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <a href="#" class="nav-dropdown-toggle">Doctors <i class="fa-solid fa-plus dropdown-icon"></i></a>
+            <div class="nav-dropdown-menu">
+              <a href="gallery.html">Doctors</a>
+              <a href="gallery.html#details">Doctors Details</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <a href="#" class="nav-dropdown-toggle">Pages <i class="fa-solid fa-plus dropdown-icon"></i></a>
+            <div class="nav-dropdown-menu">
+              <a href="faq.html">FAQs</a>
+              <a href="faq.html">Features</a>
+              <a href="appointment.html">Appointment</a>
+              <a href="faq.html">404 Page</a>
+            </div>
+          </div>
+          <a href="contact.html">Contact Us</a>
+          <a href="#" class="btn-nav">
+            Sign Up
+            <span class="btn-arrow-circle"><i class="fa-solid fa-chevron-right"></i></span>
+          </a>
         </nav>
         <div class="hamburger">
           <span></span>
@@ -33,6 +80,8 @@
     <div class="container">
       <h1>Our Services</h1>
       <div class="breadcrumb">
+        <a href="index.html">Home</a>
+        <span class="separator">&rarr;</span>
         <span class="current">Services</span>
       </div>
     </div>
@@ -46,52 +95,92 @@
       </div>
       <div class="services-grid">
         <div class="service-card fade-in">
-          <div class="service-icon">🫀</div>
-          <h3>Cardiology</h3>
-          <p>Advanced heart care including diagnostics, interventional procedures, and cardiac rehabilitation.</p>
-          <a href="#" class="read-more">Read More →</a>
+          <div class="service-img">
+            <img src="images/cardiology.jpg" alt="Cardiology service">
+          </div>
+          <div class="service-body">
+            <div class="service-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+            <h3>Cardiology</h3>
+            <p>Advanced heart care including diagnostics, interventional procedures, and cardiac rehabilitation.</p>
+            <a href="#services-details" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
         </div>
         <div class="service-card fade-in">
-          <div class="service-icon">🧠</div>
-          <h3>Neurology</h3>
-          <p>Comprehensive neurological care for brain, spine, and nervous system disorders.</p>
-          <a href="#" class="read-more">Read More →</a>
+          <div class="service-img">
+            <img src="images/neurology.jpg" alt="Neurology service">
+          </div>
+          <div class="service-body">
+            <div class="service-icon"><i class="fa-solid fa-brain"></i></div>
+            <h3>Neurology</h3>
+            <p>Comprehensive neurological care for brain, spine, and nervous system disorders.</p>
+            <a href="#services-details" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
         </div>
         <div class="service-card fade-in">
-          <div class="service-icon">🦷</div>
-          <h3>Dental Care</h3>
-          <p>Complete dental services from routine checkups to advanced cosmetic and restorative procedures.</p>
-          <a href="#" class="read-more">Read More →</a>
+          <div class="service-img">
+            <img src="images/dental.jpg" alt="Dental care service">
+          </div>
+          <div class="service-body">
+            <div class="service-icon"><i class="fa-solid fa-tooth"></i></div>
+            <h3>Dental Care</h3>
+            <p>Complete dental services from routine checkups to advanced cosmetic and restorative procedures.</p>
+            <a href="#services-details" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
         </div>
         <div class="service-card fade-in">
-          <div class="service-icon">🦴</div>
-          <h3>Orthopedics</h3>
-          <p>Expert care for bones, joints, and muscles with advanced surgical and non-surgical treatments.</p>
-          <a href="#" class="read-more">Read More →</a>
+          <div class="service-img">
+            <img src="images/orthopedics.jpg" alt="Orthopedics service">
+          </div>
+          <div class="service-body">
+            <div class="service-icon"><i class="fa-solid fa-bone"></i></div>
+            <h3>Orthopedics</h3>
+            <p>Expert care for bones, joints, and muscles with advanced surgical and non-surgical treatments.</p>
+            <a href="#services-details" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
         </div>
         <div class="service-card fade-in">
-          <div class="service-icon">👶</div>
-          <h3>Pediatrics</h3>
-          <p>Specialized healthcare for infants, children, and adolescents in a child-friendly environment.</p>
-          <a href="#" class="read-more">Read More →</a>
+          <div class="service-img">
+            <img src="images/pediatrics.jpg" alt="Pediatrics service">
+          </div>
+          <div class="service-body">
+            <div class="service-icon"><i class="fa-solid fa-child"></i></div>
+            <h3>Pediatrics</h3>
+            <p>Specialized healthcare for infants, children, and adolescents in a child-friendly environment.</p>
+            <a href="#services-details" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
         </div>
         <div class="service-card fade-in">
-          <div class="service-icon">👁️</div>
-          <h3>Ophthalmology</h3>
-          <p>Complete eye care services including vision testing, cataract surgery, and laser treatments.</p>
-          <a href="#" class="read-more">Read More →</a>
+          <div class="service-img">
+            <img src="images/ophthalmology.jpg" alt="Ophthalmology service">
+          </div>
+          <div class="service-body">
+            <div class="service-icon"><i class="fa-solid fa-eye"></i></div>
+            <h3>Ophthalmology</h3>
+            <p>Complete eye care services including vision testing, cataract surgery, and laser treatments.</p>
+            <a href="#services-details" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
         </div>
         <div class="service-card fade-in">
-          <div class="service-icon">🔬</div>
-          <h3>Pathology</h3>
-          <p>Accurate diagnostic testing with advanced laboratory equipment and expert pathologists.</p>
-          <a href="#" class="read-more">Read More →</a>
+          <div class="service-img">
+            <img src="images/pathology.jpg" alt="Pathology service">
+          </div>
+          <div class="service-body">
+            <div class="service-icon"><i class="fa-solid fa-microscope"></i></div>
+            <h3>Pathology</h3>
+            <p>Accurate diagnostic testing with advanced laboratory equipment and expert pathologists.</p>
+            <a href="#services-details" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
         </div>
         <div class="service-card fade-in">
-          <div class="service-icon">📷</div>
-          <h3>Radiology</h3>
-          <p>Advanced imaging services including X-ray, MRI, CT scans, and ultrasound diagnostics.</p>
-          <a href="#" class="read-more">Read More →</a>
+          <div class="service-img">
+            <img src="images/radiology.jpg" alt="Radiology service">
+          </div>
+          <div class="service-body">
+            <div class="service-icon"><i class="fa-solid fa-x-ray"></i></div>
+            <h3>Radiology</h3>
+            <p>Advanced imaging services including X-ray, MRI, CT scans, and ultrasound diagnostics.</p>
+            <a href="#services-details" class="read-more">Read More <i class="fa-solid fa-arrow-right"></i></a>
+          </div>
         </div>
       </div>
     </div>
@@ -102,12 +191,12 @@
       <div class="cta-content fade-in">
         <h2>Need Emergency Medical Help?</h2>
         <p>Our emergency department is open 24/7 with rapid response teams ready to serve you.</p>
-        <a href="#" class="btn btn-accent">Contact Us Now</a>
+        <a href="appointment.html" class="btn btn-primary">Book an Appointment <i class="fa-solid fa-chevron-right"></i></a>
       </div>
     </div>
   </section>
 
-  <section class="departments-section section-padding">
+  <section class="departments-section section-padding" id="services-details">
     <div class="container">
       <div class="section-title fade-in">
         <h2>Our Departments</h2>
@@ -118,32 +207,43 @@
           <h3>Departments</h3>
           <div class="tab-item active" data-tab="tab-cardiology">
             Cardiology
-            <span class="arrow">▶</span>
+            <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
           </div>
           <div class="tab-item" data-tab="tab-neurology">
             Neurology
-            <span class="arrow">▶</span>
+            <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
           </div>
           <div class="tab-item" data-tab="tab-dental">
             Dental Care
-            <span class="arrow">▶</span>
+            <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
           </div>
           <div class="tab-item" data-tab="tab-orthopedics">
             Orthopedics
-            <span class="arrow">▶</span>
+            <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
           </div>
           <div class="tab-item" data-tab="tab-pediatrics">
             Pediatrics
-            <span class="arrow">▶</span>
+            <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
           </div>
           <div class="tab-item" data-tab="tab-ophthalmology">
             Ophthalmology
-            <span class="arrow">▶</span>
+            <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
+          </div>
+          <div class="tab-item" data-tab="tab-pathology">
+            Pathology
+            <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
+          </div>
+          <div class="tab-item" data-tab="tab-radiology">
+            Radiology
+            <span class="arrow"><i class="fa-solid fa-chevron-right"></i></span>
           </div>
         </div>
         <div>
           <div class="departments-panel active" id="tab-cardiology">
-            <div class="panel-image" style="background:linear-gradient(135deg, #1a76d1, #2ec4b6);">🫀</div>
+            <div class="panel-image">
+              <img src="images/cardiology.jpg" alt="Cardiology department">
+              <div class="panel-icon"><i class="fa-solid fa-heart-pulse"></i></div>
+            </div>
             <div class="panel-content">
               <h3>Cardiology Department</h3>
               <p>Our cardiology department is equipped with state-of-the-art diagnostic and interventional facilities. We offer comprehensive cardiac care including echocardiography, stress testing, cardiac catheterization, angioplasty, and heart surgery. Our team of experienced cardiologists and cardiac surgeons work collaboratively to provide personalized treatment plans for each patient.</p>
@@ -159,7 +259,10 @@
             </div>
           </div>
           <div class="departments-panel" id="tab-neurology">
-            <div class="panel-image" style="background:linear-gradient(135deg, #f093fb, #f5576c);">🧠</div>
+            <div class="panel-image">
+              <img src="images/neurology.jpg" alt="Neurology department">
+              <div class="panel-icon"><i class="fa-solid fa-brain"></i></div>
+            </div>
             <div class="panel-content">
               <h3>Neurology Department</h3>
               <p>The neurology department offers comprehensive care for disorders affecting the brain, spinal cord, and nervous system. Our expert neurologists utilize advanced diagnostic tools including MRI, CT scans, EEG, and nerve conduction studies to accurately diagnose and treat neurological conditions.</p>
@@ -175,7 +278,10 @@
             </div>
           </div>
           <div class="departments-panel" id="tab-dental">
-            <div class="panel-image" style="background:linear-gradient(135deg, #4facfe, #00f2fe);">🦷</div>
+            <div class="panel-image">
+              <img src="images/dental.jpg" alt="Dental care department">
+              <div class="panel-icon"><i class="fa-solid fa-tooth"></i></div>
+            </div>
             <div class="panel-content">
               <h3>Dental Care Department</h3>
               <p>Our dental department provides comprehensive oral healthcare services for patients of all ages. From routine cleanings and fillings to advanced cosmetic dentistry and oral surgery, our skilled dentists ensure a comfortable and pain-free experience.</p>
@@ -191,7 +297,10 @@
             </div>
           </div>
           <div class="departments-panel" id="tab-orthopedics">
-            <div class="panel-image" style="background:linear-gradient(135deg, #43e97b, #38f9d7);">🦴</div>
+            <div class="panel-image">
+              <img src="images/orthopedics.jpg" alt="Orthopedics department">
+              <div class="panel-icon"><i class="fa-solid fa-bone"></i></div>
+            </div>
             <div class="panel-content">
               <h3>Orthopedics Department</h3>
               <p>Our orthopedics department offers comprehensive care for musculoskeletal conditions, including bones, joints, ligaments, tendons, and muscles. Our orthopedic surgeons specialize in both surgical and non-surgical treatments to restore mobility and reduce pain.</p>
@@ -207,7 +316,10 @@
             </div>
           </div>
           <div class="departments-panel" id="tab-pediatrics">
-            <div class="panel-image" style="background:linear-gradient(135deg, #fa709a, #fee140);">👶</div>
+            <div class="panel-image">
+              <img src="images/pediatrics.jpg" alt="Pediatrics department">
+              <div class="panel-icon"><i class="fa-solid fa-child"></i></div>
+            </div>
             <div class="panel-content">
               <h3>Pediatrics Department</h3>
               <p>Our pediatrics department is dedicated to the health and well-being of infants, children, and adolescents. We provide comprehensive medical care in a warm, child-friendly environment designed to put young patients at ease.</p>
@@ -223,7 +335,10 @@
             </div>
           </div>
           <div class="departments-panel" id="tab-ophthalmology">
-            <div class="panel-image" style="background:linear-gradient(135deg, #a18cd1, #fbc2eb);">👁️</div>
+            <div class="panel-image">
+              <img src="images/ophthalmology.jpg" alt="Ophthalmology department">
+              <div class="panel-icon"><i class="fa-solid fa-eye"></i></div>
+            </div>
             <div class="panel-content">
               <h3>Ophthalmology Department</h3>
               <p>Our ophthalmology department offers complete eye care services, from routine vision examinations to advanced surgical procedures. Our experienced ophthalmologists use cutting-edge technology to diagnose and treat a wide range of eye conditions.</p>
@@ -238,10 +353,92 @@
               </ul>
             </div>
           </div>
+          <div class="departments-panel" id="tab-pathology">
+            <div class="panel-image">
+              <img src="images/pathology.jpg" alt="Pathology department">
+              <div class="panel-icon"><i class="fa-solid fa-microscope"></i></div>
+            </div>
+            <div class="panel-content">
+              <h3>Pathology Department</h3>
+              <p>Our pathology department provides comprehensive diagnostic testing services with state-of-the-art equipment and highly skilled pathologists. We offer a wide range of laboratory investigations including hematology, biochemistry, microbiology, and histopathology to support accurate diagnosis.</p>
+              <p>Our advanced automated analyzers and strict quality control protocols ensure precise, reliable, and timely results for effective patient care.</p>
+              <ul>
+                <li>Clinical Pathology</li>
+                <li>Hematology & Coagulation</li>
+                <li>Microbiology & Culture</li>
+                <li>Histopathology & Biopsy</li>
+                <li>Molecular Diagnostics</li>
+                <li>Blood Banking & Transfusion</li>
+              </ul>
+            </div>
+          </div>
+          <div class="departments-panel" id="tab-radiology">
+            <div class="panel-image">
+              <img src="images/radiology.jpg" alt="Radiology department">
+              <div class="panel-icon"><i class="fa-solid fa-x-ray"></i></div>
+            </div>
+            <div class="panel-content">
+              <h3>Radiology Department</h3>
+              <p>Our radiology department offers advanced imaging services using the latest technology to provide accurate and detailed diagnostic images. From routine X-rays to complex MRI and CT scans, our team of radiologists and technologists ensure the highest standards of care.</p>
+              <p>We deliver quick, precise imaging reports that help physicians make informed treatment decisions for every patient.</p>
+              <ul>
+                <li>X-Ray Imaging</li>
+                <li>MRI & CT Scans</li>
+                <li>Ultrasound Diagnostics</li>
+                <li>Mammography</li>
+                <li>Interventional Radiology</li>
+                <li>PET & Nuclear Medicine</li>
+              </ul>
+            </div>
+          </div>
         </div>
       </div>
     </div>
   </section>
+
+  <section class="team-section section-padding">
+    <div class="container">
+      <div class="section-title fade-in">
+        <h2>Our Expert Doctors</h2>
+        <p>Meet our specialist doctors who bring expertise and compassionate care to every patient.</p>
+      </div>
+      <div class="team-grid">
+        <div class="team-card fade-in">
+          <div class="team-img"><img src="images/doctor-1.jpg" alt="Dr. John Smith"></div>
+          <div class="team-info">
+            <h3>Dr. John Smith</h3>
+            <p class="designation">Director & Chief Medical Officer</p>
+            <p class="message">"Our commitment is to provide healthcare that combines medical excellence with genuine compassion."</p>
+          </div>
+        </div>
+        <div class="team-card fade-in">
+          <div class="team-img"><img src="images/doctor-2.jpg" alt="Dr. Sarah Johnson"></div>
+          <div class="team-info">
+            <h3>Dr. Sarah Johnson</h3>
+            <p class="designation">Medical Superintendent</p>
+            <p class="message">"Every patient deserves the best possible care delivered with dignity, respect, and understanding."</p>
+          </div>
+        </div>
+        <div class="team-card fade-in">
+          <div class="team-img"><img src="images/doctor-3.jpg" alt="Dr. Michael Chen"></div>
+          <div class="team-info">
+            <h3>Dr. Michael Chen</h3>
+            <p class="designation">Head of Cardiology</p>
+            <p class="message">"Advancing cardiac care through innovation and a patient-first approach is our driving force."</p>
+          </div>
+        </div>
+        <div class="team-card fade-in">
+          <div class="team-img"><img src="images/doctor-4.jpg" alt="Dr. Emily Davis"></div>
+          <div class="team-info">
+            <h3>Dr. Emily Davis</h3>
+            <p class="designation">Head of Neurology</p>
+            <p class="message">"We combine cutting-edge neuroscience with compassionate care to transform lives."</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
 
   <section class="gallery-section section-padding">
     <div class="container">
@@ -251,27 +448,39 @@
       </div>
       <div class="gallery-grid">
         <div class="gallery-item fade-in">
-          <div class="gallery-img" style="background:linear-gradient(135deg, #1a76d1, #2ec4b6);">🏥</div>
+          <div class="gallery-img">
+            <img src="images/hospital-building.jpg" alt="Hospital building">
+          </div>
           <div class="gallery-caption">Hospital Building</div>
         </div>
         <div class="gallery-item fade-in">
-          <div class="gallery-img" style="background:linear-gradient(135deg, #f093fb, #f5576c);">🩺</div>
+          <div class="gallery-img">
+            <img src="images/medical-team.jpg" alt="Our medical team">
+          </div>
           <div class="gallery-caption">Our Medical Team</div>
         </div>
         <div class="gallery-item fade-in">
-          <div class="gallery-img" style="background:linear-gradient(135deg, #4facfe, #00f2fe);">💉</div>
+          <div class="gallery-img">
+            <img src="images/lab-facility.jpg" alt="Modern lab facility">
+          </div>
           <div class="gallery-caption">Modern Lab Facility</div>
         </div>
         <div class="gallery-item fade-in">
-          <div class="gallery-img" style="background:linear-gradient(135deg, #43e97b, #38f9d7);">🛏️</div>
+          <div class="gallery-img">
+            <img src="images/patient-rooms.jpg" alt="Patient rooms">
+          </div>
           <div class="gallery-caption">Patient Rooms</div>
         </div>
         <div class="gallery-item fade-in">
-          <div class="gallery-img" style="background:linear-gradient(135deg, #fa709a, #fee140);">🔬</div>
+          <div class="gallery-img">
+            <img src="images/research-center.jpg" alt="Research center">
+          </div>
           <div class="gallery-caption">Research Center</div>
         </div>
         <div class="gallery-item fade-in">
-          <div class="gallery-img" style="background:linear-gradient(135deg, #a18cd1, #fbc2eb);">🚑</div>
+          <div class="gallery-img">
+            <img src="images/emergency.jpg" alt="Emergency services">
+          </div>
           <div class="gallery-caption">Emergency Services</div>
         </div>
       </div>
@@ -282,37 +491,59 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-<a href="about.html" class="logo">
-            <span class="logo-icon">+</span>
-            Medi<span>vibe</span>
+          <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="MediVibe Logo" class="nav-logo">
           </a>
           <p>Providing compassionate, world-class healthcare since 2001. Your health and well-being are our top priorities.</p>
+          <div class="footer-social">
+            <a href="#" class="fb" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+            <a href="#" class="wa" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+            <a href="#" class="ig" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+            <a href="#" class="yt" aria-label="YouTube"><i class="fa-brands fa-youtube"></i></a>
+          </div>
         </div>
         <div>
           <h4>Quick Links</h4>
           <ul>
-            <li><a href="index.html">Home</a></li>
-            <li><a href="about.html">About Us</a></li>
-            <li><a href="services.html">Services</a></li>
-            <li><a href="appointment.html">Appointment</a></li>
+            <li><a href="about.html"><i class="fa-solid fa-chevron-right"></i>About Us</a></li>
+            <li><a href="services.html"><i class="fa-solid fa-chevron-right"></i>Our Services</a></li>
+            <li><a href="appointment.html"><i class="fa-solid fa-chevron-right"></i>Book Appointment</a></li>
+            <li><a href="#"><i class="fa-solid fa-chevron-right"></i>Privacy Policy</a></li>
           </ul>
         </div>
         <div>
-          <h4>Our Services</h4>
-          <ul>
-            <li><a href="#">Cardiology</a></li>
-            <li><a href="#">Neurology</a></li>
-            <li><a href="#">Orthopedics</a></li>
-            <li><a href="#">Pediatrics</a></li>
-          </ul>
-        </div>
-        <div>
-          <h4>Contact Info</h4>
+          <h4>Contact Us</h4>
           <ul class="footer-contact">
-            <li><span class="fc-icon">📍</span> 123 Healthcare Ave, Medical City</li>
-            <li><span class="fc-icon">📞</span> +1 (555) 123-4567</li>
-            <li><span class="fc-icon">✉️</span> info@medivibehospital.com</li>
+            <li>
+              <span class="fc-icon"><i class="fa-solid fa-location-dot"></i></span>
+              123 Healthcare Ave, Medical City
+            </li>
+            <li>
+              <span class="fc-icon"><i class="fa-solid fa-phone"></i></span>
+              +1 (555) 123-4567
+            </li>
+            <li>
+              <span class="fc-icon"><i class="fa-solid fa-envelope"></i></span>
+              info@medivibehospital.com
+            </li>
           </ul>
+        </div>
+        <div>
+          <h4>Opening Hours</h4>
+          <div class="opening-hours">
+            <div class="oh-row">
+              <span class="day">Mon - Thu</span>
+              <span class="time">08:00 AM - 05:00 PM</span>
+            </div>
+            <div class="oh-row">
+              <span class="day">Fri - Sat</span>
+              <span class="time">08:00 AM - 05:00 PM</span>
+            </div>
+            <div class="oh-row">
+              <span class="day">Sunday</span>
+              <span class="closed">Emergency Only</span>
+            </div>
+          </div>
         </div>
       </div>
       <div class="footer-bottom">

@@ -1,9 +1,13 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>About Us - Medivibe Hospital</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/7.0.1/css/all.min.css">
   <link rel="stylesheet" href="medivibe.css">
 </head>
 <body>
@@ -12,13 +16,39 @@
     <div class="container">
       <div class="header-inner">
         <a href="index.html" class="logo">
-          <span class="logo-icon">+</span>
-          Medi<span>vibe</span>
+          <img src="images/logo.png" alt="MediVibe Logo" class="nav-logo">
         </a>
         <nav class="nav">
-          <a href="about.html" class="active">About Us</a>
-          <a href="services.html">Services</a>
-          <a href="appointment.html" class="btn-appointment">Appointment</a>
+          <a href="index.html">Home</a>
+          <a href="about.html" class="active">About</a>
+          <div class="nav-dropdown">
+            <a href="#" class="nav-dropdown-toggle">Services <i class="fa-solid fa-plus dropdown-icon"></i></a>
+            <div class="nav-dropdown-menu">
+              <a href="services.html">Services</a>
+              <a href="services.html#services-details">Services Details</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <a href="#" class="nav-dropdown-toggle">Doctors <i class="fa-solid fa-plus dropdown-icon"></i></a>
+            <div class="nav-dropdown-menu">
+              <a href="gallery.html">Doctors</a>
+              <a href="gallery.html#details">Doctors Details</a>
+            </div>
+          </div>
+          <div class="nav-dropdown">
+            <a href="#" class="nav-dropdown-toggle">Pages <i class="fa-solid fa-plus dropdown-icon"></i></a>
+            <div class="nav-dropdown-menu">
+              <a href="faq.html">FAQs</a>
+              <a href="faq.html">Features</a>
+              <a href="appointment.html">Appointment</a>
+              <a href="faq.html">404 Page</a>
+            </div>
+          </div>
+          <a href="contact.html">Contact Us</a>
+          <a href="#" class="btn-nav">
+            Sign Up
+            <span class="btn-arrow-circle"><i class="fa-solid fa-chevron-right"></i></span>
+          </a>
         </nav>
         <div class="hamburger">
           <span></span>
@@ -42,22 +72,22 @@
     <div class="container">
       <div class="counters-grid">
         <div class="counter-item fade-in">
-          <div class="counter-icon">🏥</div>
+          <div class="counter-icon"><i class="fa-solid fa-hospital"></i></div>
           <div class="counter-number" data-target="25" data-suffix="+"></div>
           <div class="counter-label">Years of Experience</div>
         </div>
         <div class="counter-item fade-in">
-          <div class="counter-icon">❤️</div>
+          <div class="counter-icon"><i class="fa-solid fa-heart-pulse"></i></div>
           <div class="counter-number" data-target="15000" data-suffix="+"></div>
           <div class="counter-label">Happy Patients</div>
         </div>
         <div class="counter-item fade-in">
-          <div class="counter-icon">👨‍⚕️</div>
+          <div class="counter-icon"><i class="fa-solid fa-user-doctor"></i></div>
           <div class="counter-number" data-target="200" data-suffix="+"></div>
           <div class="counter-label">Expert Doctors</div>
         </div>
         <div class="counter-item fade-in">
-          <div class="counter-icon">🏆</div>
+          <div class="counter-icon"><i class="fa-solid fa-trophy"></i></div>
           <div class="counter-number" data-target="50" data-suffix="+"></div>
           <div class="counter-label">Awards Won</div>
         </div>
@@ -69,20 +99,20 @@
     <div class="container">
       <div class="legacy-grid">
         <div class="legacy-image fade-in">
-          <span>🏥</span>
-          <div class="overlay-text">Est. 2001 • 25+ Years of Excellence</div>
+          <img src="images/medical-team.jpg" alt="Medivibe medical team">
+          <div class="overlay-text">Est. 2001 &bull; 25+ Years of Excellence</div>
         </div>
         <div class="legacy-content fade-in">
           <h2>Our Legacy & Story</h2>
-          <p>Founded in 2001, Medivibe Hospital began with a simple vision — to provide world-class healthcare that is accessible, compassionate, and affordable for everyone. What started as a small 50-bed facility has grown into a premier multi-specialty hospital serving thousands of patients annually.</p>
+          <p>Founded in 2001, Medivibe Hospital began with a simple vision &mdash; to provide world-class healthcare that is accessible, compassionate, and affordable for everyone. What started as a small 50-bed facility has grown into a premier multi-specialty hospital serving thousands of patients annually.</p>
           <p>Over the past two decades, we have continuously evolved with advancements in medical science, investing in cutting-edge technology and attracting some of the finest medical professionals in the country. Our commitment to excellence has made us a trusted name in healthcare.</p>
           <div class="mission-vision">
             <div class="mv-card">
-              <h4>🎯 Our Mission</h4>
+              <h4><i class="fa-solid fa-bullseye"></i> Our Mission</h4>
               <p>To deliver exceptional healthcare services with compassion, integrity, and innovation, ensuring every patient receives personalized care of the highest standard.</p>
             </div>
             <div class="mv-card">
-              <h4>🔭 Our Vision</h4>
+              <h4><i class="fa-solid fa-lightbulb"></i> Our Vision</h4>
               <p>To be a globally recognized healthcare institution that sets benchmarks in medical excellence, research, and patient-centered care.</p>
             </div>
           </div>
@@ -99,7 +129,7 @@
       </div>
       <div class="team-grid">
         <div class="team-card fade-in">
-          <div class="team-img">👨‍⚕️</div>
+          <div class="team-img"><img src="images/doctor-1.jpg" alt="Dr. John Smith"></div>
           <div class="team-info">
             <h3>Dr. John Smith</h3>
             <p class="designation">Director & Chief Medical Officer</p>
@@ -107,7 +137,7 @@
           </div>
         </div>
         <div class="team-card fade-in">
-          <div class="team-img">👩‍⚕️</div>
+          <div class="team-img"><img src="images/doctor-2.jpg" alt="Dr. Sarah Johnson"></div>
           <div class="team-info">
             <h3>Dr. Sarah Johnson</h3>
             <p class="designation">Medical Superintendent</p>
@@ -115,7 +145,7 @@
           </div>
         </div>
         <div class="team-card fade-in">
-          <div class="team-img">👨‍⚕️</div>
+          <div class="team-img"><img src="images/doctor-3.jpg" alt="Dr. Michael Chen"></div>
           <div class="team-info">
             <h3>Dr. Michael Chen</h3>
             <p class="designation">Head of Cardiology</p>
@@ -123,7 +153,7 @@
           </div>
         </div>
         <div class="team-card fade-in">
-          <div class="team-img">👩‍⚕️</div>
+          <div class="team-img"><img src="images/doctor-4.jpg" alt="Dr. Emily Davis"></div>
           <div class="team-info">
             <h3>Dr. Emily Davis</h3>
             <p class="designation">Head of Neurology</p>
@@ -142,27 +172,27 @@
       </div>
       <div class="gallery-grid">
         <div class="gallery-item fade-in">
-          <div class="gallery-img" style="background:linear-gradient(135deg, #1a76d1, #2ec4b6);">🏥</div>
+          <div class="gallery-img"><img src="images/hospital-building.jpg" alt="Hospital building"></div>
           <div class="gallery-caption">Hospital Building</div>
         </div>
         <div class="gallery-item fade-in">
-          <div class="gallery-img" style="background:linear-gradient(135deg, #f093fb, #f5576c);">🩺</div>
+          <div class="gallery-img"><img src="images/medical-team.jpg" alt="Our medical team"></div>
           <div class="gallery-caption">Our Medical Team</div>
         </div>
         <div class="gallery-item fade-in">
-          <div class="gallery-img" style="background:linear-gradient(135deg, #4facfe, #00f2fe);">💉</div>
+          <div class="gallery-img"><img src="images/lab-facility.jpg" alt="Modern lab facility"></div>
           <div class="gallery-caption">Modern Lab Facility</div>
         </div>
         <div class="gallery-item fade-in">
-          <div class="gallery-img" style="background:linear-gradient(135deg, #43e97b, #38f9d7);">🛏️</div>
+          <div class="gallery-img"><img src="images/patient-rooms.jpg" alt="Patient rooms"></div>
           <div class="gallery-caption">Patient Rooms</div>
         </div>
         <div class="gallery-item fade-in">
-          <div class="gallery-img" style="background:linear-gradient(135deg, #fa709a, #fee140);">🔬</div>
+          <div class="gallery-img"><img src="images/research-center.jpg" alt="Research center"></div>
           <div class="gallery-caption">Research Center</div>
         </div>
         <div class="gallery-item fade-in">
-          <div class="gallery-img" style="background:linear-gradient(135deg, #a18cd1, #fbc2eb);">🚑</div>
+          <div class="gallery-img"><img src="images/emergency.jpg" alt="Emergency services"></div>
           <div class="gallery-caption">Emergency Services</div>
         </div>
       </div>
@@ -173,9 +203,8 @@
     <div class="container">
       <div class="footer-grid">
         <div class="footer-brand">
-<a href="about.html" class="logo">
-            <span class="logo-icon">+</span>
-            Medi<span>vibe</span>
+        <a href="index.html" class="logo">
+            <img src="images/logo.png" alt="MediVibe Logo" class="nav-logo">
           </a>
           <p>Providing compassionate, world-class healthcare since 2001. Your health and well-being are our top priorities.</p>
         </div>
@@ -200,9 +229,9 @@
         <div>
           <h4>Contact Info</h4>
           <ul class="footer-contact">
-            <li><span class="fc-icon">📍</span> 123 Healthcare Ave, Medical City</li>
-            <li><span class="fc-icon">📞</span> +1 (555) 123-4567</li>
-            <li><span class="fc-icon">✉️</span> info@medivibehospital.com</li>
+            <li><span class="fc-icon"><i class="fa-solid fa-location-dot"></i></span> 123 Healthcare Ave, Medical City</li>
+            <li><span class="fc-icon"><i class="fa-solid fa-phone"></i></span> +1 (555) 123-4567</li>
+            <li><span class="fc-icon"><i class="fa-solid fa-envelope"></i></span> info@medivibehospital.com</li>
           </ul>
         </div>
       </div>
