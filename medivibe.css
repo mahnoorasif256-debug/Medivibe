@@ -451,7 +451,9 @@ h1, h2, h3, h4, h5, h6 {
 /* ===== PAGE HERO ===== */
 .page-hero {
   padding: 120px 0 70px;
-  background: linear-gradient(100deg, #020024 0%, #090979 45%, #00d4ff 100%);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
   text-align: center;
   position: relative;
   overflow: hidden;
