@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>profile page</title>
+    <title>departments</title>
 
     <!-- Google Fonts: Roboto -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,11 +18,13 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
               <!-- global cdn  -->
-    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../../css/global.css">
 
-    <link rel="stylesheet" href="./admin.css">
+    <link rel="stylesheet" href="../admin.css">
 </head>
 <body>
+
+
 
 <div class="dashboard-container">
     <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
@@ -31,12 +33,11 @@
   <aside class="sidebar">
     <!-- Logo Section -->
     <div class="sidebar-header">
-      <img src="../images/image.png" alt="Medivibe icon" class="footer-logo-icon" style="width:45px; height:auto;">
+      <img src="../../images/image.png" alt="Medivibe icon" class="footer-logo-icon" style="width:45px; height:auto;">
       <h2>Medivibe</h2>
-        <button class="sidebar-collapse-btn" id="sidebarCollapseBtn" aria-label="Collapse sidebar">
+       <button class="sidebar-collapse-btn" id="sidebarCollapseBtn" aria-label="Collapse sidebar">
     <i class="fa-solid fa-angle-left"></i>
   </button>
-
     </div>
 
     <!-- User Profile Card -->
@@ -56,7 +57,7 @@
       <ul class="nav-list">
         <!-- 1. Overview -->
         <li class="nav-item">
-          <a href="./admin.html" class="nav-link active">
+          <a href="../admin.html" class="nav-link active">
             <i class="fa-solid fa-border-all"></i>
             <span>Overview</span>
           </a>
@@ -69,9 +70,9 @@
             <span>Doctors</span>
           </a>
           <ul class="sub-menu">
-            <li><a href="./doctors/doctors.html">Doctors Directory</a></li>
-            <li><a href="./doctors/doctors-schedule.html">Doctor Schedule</a></li>
-            <li><a href="./doctors/doctor-profile.html">Doctor Profile</a></li>
+            <li><a href="../doctors/doctors.html">Doctors Directory</a></li>
+            <li><a href="../doctors/doctors-schedule.html">Doctor Schedule</a></li>
+            <li><a href="../doctors/doctor-profile.html">Doctor Profile</a></li>
             <li><a href="#" data-bs-toggle="modal" data-bs-target="#addDoctorModal">+ Add New Doctor</a></li>
           </ul>
         </li>
@@ -83,8 +84,8 @@
             <span>Patients</span>
           </a>
           <ul class="sub-menu">
-            <li><a href="../admin-dashbaord/pateint/pateint-direc.html">Patients Directory</a></li>
-            <li><a href="../admin-dashbaord/pateint/pateint-profile.html">Patient Profile & Records</a></li>
+            <li><a href="../pateint/pateint-direc.html">Patients Directory</a></li>
+            <li><a href="../pateint/pateint-profile.html">Patient Profile & Records</a></li>
             <li><a href="#" data-bs-toggle="modal" data-bs-target="#addPatientModal">+ Register New Patient</a></li>
           </ul>
         </li>
@@ -96,7 +97,7 @@
             <span>Appointments</span>
           </a>
           <ul class="sub-menu">
-            <li><a href="departments/department.html">Master Schedule</a></li>
+            <li><a href="../appointment/master-schedule.html">Master Schedule</a></li>
             <li><a href="#" data-bs-toggle="modal" data-bs-target="#bookAppointmentModal">+ Book Appointment</a></li>
           </ul>
         </li>
@@ -108,14 +109,14 @@
             <span>Departments</span>
           </a>
           <ul class="sub-menu">
-            <li><a href="./departments/department.html">Hospital Departments</a></li>
+            <li><a href="department.html">Hospital Departments</a></li>
             <li><a href="#" data-bs-toggle="modal" data-bs-target="#addDepartmentModal">+ Add New Department</a></li>
           </ul>
         </li>
 
         <!-- 6. Invoices -->
         <li class="nav-item">
-          <a href="./invoices.html" class="nav-link">
+          <a href="../invoices.html" class="nav-link">
             <i class="fa-solid fa-file-invoice-dollar"></i>
             <span>Invoices & Billing</span>
           </a>
@@ -123,7 +124,7 @@
 
         <!-- 7. Settings -->
         <li class="nav-item">
-          <a href="./settings.html" class="nav-link">
+          <a href="../settings.html" class="nav-link">
             <i class="fa-solid fa-gear"></i>
             <span>Settings</span>
           </a>
@@ -198,7 +199,7 @@
 
     <!-- Footer Link -->
     <div class="notif-footer text-center py-2 px-3 border-top bg-light">
-      <a href="./notifications.html" class="text-primary fw-medium fs-7 ">View All Notifications</a>
+      <a href="../notifications.html" class="text-primary fw-medium fs-7 ">View All Notifications</a>
     </div>
   </div>
 
@@ -218,7 +219,7 @@
         <!-- Admin Profile Dropdown -->
        <div class="dropdown profile-dropdown">
   <a href="#" class="profile-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-    <img src="../images/adminpic.webp" class="avatar-img">
+    <img src="../../images/adminpic.webp" class="avatar-img">
     <div class="user-info-text">
       <span class="user-name">Mahnoor Asif</span>
       <span class="user-role">Administrator</span>
@@ -229,32 +230,32 @@
   <!-- Preclinic Style Admin Dropdown -->
   <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0 p-2" style="width: 220px;">
     <!-- Profile Header Info -->
-    <li class="px-3 py-2 bg-light drop rounded mb-2">
+    <li class="px-3 py-2 bg-light rounded mb-2">
       <span class="d-block fw-bold text-dark fs-6">Mahnoor Asif</span>
       <small class="text-muted">Administrator</small>
     </li>
     
     <li>
-      <a class="dropdown-item rounded py-2" href="#">
+      <a class="dropdown-item rounded py-2" href="../profile.html">
         <i class="fa-regular fa-user me-2 text-primary"></i> Profile Settings
       </a>
     </li>
     <li>
-      <a class="dropdown-item rounded py-2" href="./settings.html">
+      <a class="dropdown-item rounded py-2" href="../settings.html">
         <i class="fa-solid fa-gear me-2 text-secondary"></i> Account Settings
       </a>
     </li>
     
     <!-- Quick Toggle Notifications -->
     <li class="dropdown-item rounded py-2 d-flex align-items-center justify-content-between">
-      <span class="not"><i class="fa-regular fa-bell me-2" ></i> Notifications</span>
+      <span><i class="fa-regular fa-bell me-2 text-warning"></i> Notifications</span>
       <div class="form-check form-switch m-0">
         <input class="form-check-input" type="checkbox" id="notifSwitch" checked style="cursor: pointer;">
       </div>
     </li>
 
     <li>
-      <a class="dropdown-item rounded py-2" href="invoices.html">
+      <a class="dropdown-item rounded py-2" href="../invoices.html">
         <i class="fa-solid fa-receipt me-2 text-success"></i> Transactions
       </a>
     </li>
@@ -275,155 +276,82 @@
     </header>
 
     <!-- DASHBOARD BODY CONTENT -->
-    <div class="content-body" style="padding: 24px;">
-<div class="container-fluid p-4">
-  
-  <!-- Main White Card Container -->
-  <div class="card border-0 shadow-sm rounded-4 bg-white p-4">
-    
-    <!-- Title & Top Horizontal Tabs (No Weird Side Buttons) -->
-    <div class="d-flex justify-content-between align-items-center  border-bottom  pb-3 mb-4">
-      <h4 class="fw-bold text-dark m-0">Account Settings</h4>
 
-      <!-- Top Horizontal Tabs -->
-      <ul class="nav nav-pills custom-profile-tabs" id="pills-tab" role="tablist">
-                <li class="nav-item" role="presentation">
-          <button class="nav-link active fw-semibold" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" title="Profile">
-            <i class="fa-solid fa-user me-2"></i><span class="tab-label">Profile</span>
-          </button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link fw-semibold" id="pills-security-tab" data-bs-toggle="pill" data-bs-target="#pills-security" type="button" role="tab" title="Security">
-            <i class="fa-solid fa-lock me-2"></i><span class="tab-label">Security</span>
-          </button>
-        </li>
-        <li class="nav-item noti" role="presentation">
-          <button class="nav-link fw-semibold" id="pills-notifications-tab" data-bs-toggle="pill" data-bs-target="#pills-notifications" type="button" role="tab" title="Notifications">
-            <i class="fa-solid fa-bell me-2"></i><span class="tab-label">Notifications</span>
-          </button>
-        </li>
-      </ul>
+<!-- DASHBOARD BODY CONTENT -->
+<div class="container-fluid px-4 py-4">
+
+  <!-- Page Header & Action -->
+  <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
+    <div>
+      <h2 class="fw-bold text-dark mb-1" style="font-size: 24px;">Hospital Departments</h2>
+      <p class="text-muted mb-0" style="font-size: 13.5px;">Manage clinical departments, heads of department, and room allocations.</p>
     </div>
-
-    <!-- Tab Contents -->
-    <div class="tab-content" id="pills-tabContent">
-      
-      <!-- TAB 1: PROFILE FORM -->
-      <div class="tab-pane fade show active" id="pills-profile" role="tabpanel">
-        
-        <!-- Profile Photo Area -->
-        <div class="d-flex align-items-center gap-3 mb-4 pb-3 border-bottom">
-          <img src="../images/adminpic.webp" alt="Profile" class="rounded-circle border" width="80" height="80">
-          <div>
-            <button type="button" class="btn change  btn-sm rounded-pill px-3" id="changePhotoBtn">
-              <i class="fa-solid fa-upload me-1"></i> Change Photo
-            </button>
-            <input type="file" id="profilePhotoInput" accept="image/png, image/jpeg" hidden>
-            <div class="text-muted small mt-1">JPG, PNG max 2MB</div>
-          </div>
-        </div>
-
-        <form>
-          <!-- Basic Info -->
-          <h6 class="fw-bold form-section-title  text-uppercase mb-3">Basic Information</h6>
-          <div class="row g-3 mb-4">
-            <div class="col-md-6">
-              <label class="form-label text-secondary small fw-semibold">First Name</label>
-              <input type="text" class="form-control bg-light border p-2.5 rounded-3" >
-            </div>
-            <div class="col-md-6">
-              <label class="form-label text-secondary small fw-semibold">Last Name</label>
-              <input type="text" class="form-control bg-light border p-2.5 rounded-3" >
-            </div>
-            <div class="col-md-6">
-              <label class="form-label text-secondary small fw-semibold">Email Address</label>
-              <input type="email" class="form-control bg-light border p-2.5 rounded-3" >
-            </div>
-            <div class="col-md-6">
-              <label class="form-label text-secondary small fw-semibold">Phone Number</label>
-              <input type="text" class="form-control bg-light border p-2.5 rounded-3" placeholder="92+">
-            </div>
-          </div>
-
-          <!-- Address Details -->
-          <h6 class="fw-bold form-section-title  text-uppercase mb-3">Address Details</h6>
-          <div class="row g-3 mb-4">
-            <div class="col-12">
-              <label class="form-label text-secondary small fw-semibold">Address Line</label>
-              <input type="text" class="form-control bg-light border p-2.5 rounded-3" >
-            </div>
-            <div class="col-md-6">
-              <label class="form-label text-secondary small fw-semibold">City</label>
-              <input type="text" class="form-control bg-light border p-2.5 rounded-3" >
-            </div>
-            <div class="col-md-6">
-              <label class="form-label text-secondary small fw-semibold">Country</label>
-              <input type="text" class="form-control bg-light border p-2.5 rounded-3" >
-            </div>
-          </div>
-
-          <!-- Save Button -->
-          <div class="text-end border-top pt-3">
-            <button type="submit" class="btn sub-btn-anim px-4 py-2 rounded-3 fw-bold">
-    <span class="wave-text">
-      <span style="--i:0">S</span><span style="--i:1">a</span><span style="--i:2">v</span><span style="--i:3">e</span><span style="--i:4">&nbsp;</span><span style="--i:5">C</span><span style="--i:6">h</span><span style="--i:7">a</span><span style="--i:8">n</span><span style="--i:9">g</span><span style="--i:10">e</span><span style="--i:11">s</span>
-    </span>
-  </button>
-          </div>
-        </form>
-
-      </div>
-
-      <!-- TAB 2: SECURITY -->
-
-      <div class="tab-pane fade" id="pills-security" role="tabpanel">
-        <h6 class="fw-bold form-section-title  text-uppercase mb-3">Password Management</h6>
-        <form>
-          <div class="row g-3 max-w-md mb-4">
-            <div class="col-12">
-              <label class="form-label text-secondary small fw-semibold">Current Password</label>
-              <input type="password" class="form-control bg-light border p-2.5 rounded-3">
-            </div>
-            <div class="col-md-6">
-              <label class="form-label text-secondary small fw-semibold">New Password</label>
-              <input type="password" class="form-control bg-light border p-2.5 rounded-3">
-            </div>
-            <div class="col-md-6">
-              <label class="form-label text-secondary small fw-semibold">Confirm New Password</label>
-              <input type="password" class="form-control bg-light border p-2.5 rounded-3">
-            </div>
-          </div>
-          <div class="text-end border-top pt-3">
-            <button type="submit" class="btn sub-btn-anim px-4 py-2 rounded-3 fw-bold">
-  <span class="wave-text">
-    <span style="--i:0">U</span><span style="--i:1">p</span><span style="--i:2">d</span><span style="--i:3">a</span><span style="--i:4">t</span><span style="--i:5">e</span><span style="--i:6">&nbsp;</span><span style="--i:7">P</span><span style="--i:8">a</span><span style="--i:9">s</span><span style="--i:10">s</span><span style="--i:11">w</span><span style="--i:12">o</span><span style="--i:13">r</span><span style="--i:14">d</span>
-  </span>
-</button>
-          </div>
-        </form>
-      </div>
-
-      <!-- TAB 3: NOTIFICATIONS -->
-      <div class="tab-pane fade" id="pills-notifications" role="tabpanel">
-        <h6 class="fw-bold form-section-title  text-uppercase mb-3">Alert Preferences</h6>
-        <div class="d-flex justify-content-between em align-items-center p-3 bg-light rounded-3 mb-2 border">
-          <div>
-            <div class="fw-bold text-dark">Email Notifications</div>
-            <div class="small text-muted">Receive email updates for new patient appointments</div>
-          </div>
-          <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" checked>
-          </div>
-        </div>
-      </div>
-
+    <div>
+      <button class="mv-btn-gradient" data-bs-toggle="modal" data-bs-target="#addDepartmentModal">
+        <i class="fa-solid fa-plus me-2"></i> Add New Department
+      </button>
     </div>
   </div>
-</div>       
+
+  <!-- Departments Grid -->
+  <div class="row g-4" id="departmentsGrid">
+    <!-- JS renders department cards here -->
+  </div>
+
+</div>
+<!-- DASHBOARD BODY CONTENT END -->
+
+
+<!-- ========================================== -->
+<!-- MODAL: #addDepartmentModal (goes OUTSIDE <main>) -->
+<!-- ========================================== -->
+<div class="modal fade" id="addDepartmentModal" tabindex="-1" aria-labelledby="addDepartmentModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-dialog-centered">
+    <div class="modal-content border-0 rounded-4 shadow">
+      <div class="modal-header border-bottom px-4 py-3">
+        <h5 class="modal-title fw-bold text-dark" id="addDepartmentModalLabel">
+          <i class="fa-solid fa-hospital-user me-2 text-primary"></i> Add New Department
+        </h5>
+        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+      </div>
+      <div class="modal-body p-4">
+        <form id="addDepartmentForm" onsubmit="event.preventDefault(); handleAddDepartmentSubmit(this);" novalidate>
+          <div class="row g-3">
+            <div class="col-12">
+              <label class="form-label fw-semibold fs-7 text-secondary">Department Name</label>
+              <input type="text" id="newDeptName" class="form-control rounded-pill px-3" placeholder="e.g. Dermatology" required>
+            </div>
+            <div class="col-12">
+              <label class="form-label fw-semibold fs-7 text-secondary">Head of Department (HOD)</label>
+              <input type="text" id="newDeptHod" class="form-control rounded-pill px-3" placeholder="e.g. Dr. Nida Farooq" required>
+            </div>
+            <div class="col-12">
+              <label class="form-label fw-semibold fs-7 text-secondary">Room Numbers / Location</label>
+              <input type="text" id="newDeptRooms" class="form-control rounded-pill px-3" placeholder="e.g. 201, 202, 203" required>
+              <small class="text-muted" style="font-size: 11.5px;">Comma-separated room numbers.</small>
+            </div>
+            <div class="col-12">
+              <label class="form-label fw-semibold fs-7 text-secondary">Department Description</label>
+              <textarea id="newDeptDescription" class="form-control rounded-4 px-3" rows="3" placeholder="Brief description of the department's function..."></textarea>
+            </div>
+          </div>
+
+          <div class="d-flex justify-content-end gap-2 mt-4 pt-3 border-top">
+            <button type="button" class="btn btn-light rounded-pill px-4 fw-medium" data-bs-dismiss="modal">Cancel</button>
+            <button type="submit" class="mv-btn-gradient">Create Department</button>
+          </div>
+        </form>
+      </div>
     </div>
+  </div>
+</div>
+
+                <!-- footer  -->
+
+                
 <footer class="admin-footer text-center py-3 border-top mt-auto">
       <p class="text-muted mb-0" style="font-size: 13px;">2026 © Medivibe, All Rights Reserved</p>
-</footer>
+    </footer>
   </main>
   <!-- MAIN CONTENT AREA END -->
 
@@ -431,7 +359,6 @@
 
   
 </div>
-
 
 
 
@@ -597,48 +524,6 @@
   </div>
 </div>
 
-<!-- modal 3 -->
-
-<div class="modal fade" id="addDepartmentModal" tabindex="-1" aria-labelledby="addDepartmentModalLabel" aria-hidden="true">
-  <div class="modal-dialog modal-dialog-centered">
-    <div class="modal-content border-0 rounded-4 shadow">
-      <div class="modal-header border-bottom px-4 py-3">
-        <h5 class="modal-title fw-bold text-dark" id="addDepartmentModalLabel">
-          <i class="fa-solid fa-hospital-user me-2 text-primary"></i> Add New Department
-        </h5>
-        <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
-      </div>
-      <div class="modal-body p-4">
-        <form id="addDepartmentForm" onsubmit="event.preventDefault(); handleAddDepartmentSubmit(this);" novalidate>
-          <div class="row g-3">
-            <div class="col-12">
-              <label class="form-label fw-semibold fs-7 text-secondary">Department Name</label>
-              <input type="text" id="newDeptName" class="form-control rounded-pill px-3" placeholder="e.g. Dermatology" required>
-            </div>
-            <div class="col-12">
-              <label class="form-label fw-semibold fs-7 text-secondary">Head of Department (HOD)</label>
-              <input type="text" id="newDeptHod" class="form-control rounded-pill px-3" placeholder="e.g. Dr. Nida Farooq" required>
-            </div>
-            <div class="col-12">
-              <label class="form-label fw-semibold fs-7 text-secondary">Room Numbers / Location</label>
-              <input type="text" id="newDeptRooms" class="form-control rounded-pill px-3" placeholder="e.g. 201, 202, 203" required>
-              <small class="text-muted" style="font-size: 11.5px;">Comma-separated room numbers.</small>
-            </div>
-            <div class="col-12">
-              <label class="form-label fw-semibold fs-7 text-secondary">Department Description</label>
-              <textarea id="newDeptDescription" class="form-control rounded-4 px-3" rows="3" placeholder="Brief description of the department's function..."></textarea>
-            </div>
-          </div>
-
-          <div class="d-flex justify-content-end gap-2 mt-4 pt-3 border-top">
-            <button type="button" class="btn btn-light rounded-pill px-4 fw-medium" data-bs-dismiss="modal">Cancel</button>
-            <button type="submit" class="mv-btn-gradient">Create Department</button>
-          </div>
-        </form>
-      </div>
-    </div>
-  </div>
-</div>
 
 
 <!-- modal 4  -->
@@ -725,14 +610,17 @@
 
 
 
- 
-<!-- <div class="glow-cursor-dot"></div>
-<div class="glow-cursor-trail"></div> -->
+
+
+
+
+
+
 
 
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
 
-    <script src="./admin.js"></script>
+    <script src="../admin.js"></script>
 </body>
 </html>
