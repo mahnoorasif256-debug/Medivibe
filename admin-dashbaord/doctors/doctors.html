@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>profile page</title>
+    <title>Doctors</title>
 
     <!-- Google Fonts: Roboto -->
 <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -18,11 +18,67 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-sRIl4kxILFvY47J16cr9ZwB07vP4J8+LH7qKQnuqkuIAvNWLzeN8tE5YBujZqJLB" crossorigin="anonymous">
 
               <!-- global cdn  -->
-    <link rel="stylesheet" href="../css/global.css">
+    <link rel="stylesheet" href="../../css/global.css">
 
-    <link rel="stylesheet" href="./admin.css">
+    <link rel="stylesheet" href="../admin.css">
+
+    <!-- ===== Doctors Directory card styles ===== -->
+    <style>
+      .doctor-status-pill {
+        font-size: 11px;
+        font-weight: 700;
+        padding: 5px 12px;
+        border-radius: 50px;
+        display: inline-flex;
+        align-items: center;
+        gap: 5px;
+      }
+      .doctor-status-pill::before {
+        content: "";
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        display: inline-block;
+      }
+      .status-completed { background: var(--success-green-bg); color: var(--success-green); }
+      .status-completed::before { background: var(--success-green); }
+      .status-cancelled { background: var(--danger-red-bg); color: var(--red-danger); }
+      .status-cancelled::before { background: var(--red-danger); }
+      body.dark-theme .status-completed { background: rgba(22, 163, 74, 0.18); color: #4ade80; }
+      body.dark-theme .status-completed::before { background: #4ade80; }
+      body.dark-theme .status-cancelled { background: rgba(239, 68, 68, 0.18); color: #f87171; }
+      body.dark-theme .status-cancelled::before { background: #f87171; }
+
+      .doctor-dir-card {
+        transition: transform .25s ease, box-shadow .25s ease;
+      }
+      .doctor-dir-card:hover {
+        transform: translateY(-4px);
+        box-shadow: 0 .75rem 1.5rem var(--shadow-dark-card) !important;
+      }
+      body.dark-theme .doctor-dir-card:hover {
+        box-shadow: 0 .75rem 1.5rem rgba(0, 0, 0, .35) !important;
+      }
+      .doctor-dir-avatar {
+        width: 80px;
+        height: 80px;
+        object-fit: cover;
+        border: 3px solid var(--border-extra-light);
+      }
+      body.dark-theme .doctor-dir-avatar {
+        border-color: var(--border-dark-state, #1e293b);
+      }
+      .doctor-dir-fee-box {
+        background-color: var(--bg-main);
+        font-size: 12px;
+      }
+      body.dark-theme .doctor-dir-fee-box {
+        background-color: var(--dark-surface-subtle);
+      }
+    </style>
 </head>
 <body>
+
 
 <div class="dashboard-container">
     <div class="sidebar-backdrop" id="sidebarBackdrop"></div>
@@ -31,12 +87,11 @@
   <aside class="sidebar">
     <!-- Logo Section -->
     <div class="sidebar-header">
-      <img src="../images/image.png" alt="Medivibe icon" class="footer-logo-icon" style="width:45px; height:auto;">
+      <img src="../../images/image.png" alt="Medivibe icon" class="footer-logo-icon" style="width:45px; height:auto;">
       <h2>Medivibe</h2>
-        <button class="sidebar-collapse-btn" id="sidebarCollapseBtn" aria-label="Collapse sidebar">
+       <button class="sidebar-collapse-btn" id="sidebarCollapseBtn" aria-label="Collapse sidebar">
     <i class="fa-solid fa-angle-left"></i>
   </button>
-
     </div>
 
     <!-- User Profile Card -->
@@ -56,7 +111,7 @@
       <ul class="nav-list">
         <!-- 1. Overview -->
         <li class="nav-item">
-          <a href="./admin.html" class="nav-link active">
+          <a href="../admin.html" class="nav-link active">
             <i class="fa-solid fa-border-all"></i>
             <span>Overview</span>
           </a>
@@ -69,9 +124,9 @@
             <span>Doctors</span>
           </a>
           <ul class="sub-menu">
-            <li><a href="./doctors/doctors.html">Doctors Directory</a></li>
-            <li><a href="./doctors/doctors-schedule.html">Doctor Schedule</a></li>
-            <li><a href="./doctors/doctor-profile.html">Doctor Profile</a></li>
+            <li><a href="doctors.html">Doctors Directory</a></li>
+            <li><a href="doctors-schedule.html">Doctor Schedule</a></li>
+            <li><a href="doctor-profile.html">Doctor Profile</a></li>
             <li><a href="#" data-bs-toggle="modal" data-bs-target="#addDoctorModal">+ Add New Doctor</a></li>
           </ul>
         </li>
@@ -83,8 +138,8 @@
             <span>Patients</span>
           </a>
           <ul class="sub-menu">
-            <li><a href="../admin-dashbaord/pateint/pateint-direc.html">Patients Directory</a></li>
-            <li><a href="../admin-dashbaord/pateint/pateint-profile.html">Patient Profile & Records</a></li>
+            <li><a href="../pateint/pateint-direc.html">Patients Directory</a></li>
+            <li><a href="../pateint/pateint-profile.html">Patient Profile & Records</a></li>
             <li><a href="#" data-bs-toggle="modal" data-bs-target="#addPatientModal">+ Register New Patient</a></li>
           </ul>
         </li>
@@ -96,7 +151,7 @@
             <span>Appointments</span>
           </a>
           <ul class="sub-menu">
-            <li><a href="departments/department.html">Master Schedule</a></li>
+            <li><a href="../appointment/master-schedule.html">Master Schedule</a></li>
             <li><a href="#" data-bs-toggle="modal" data-bs-target="#bookAppointmentModal">+ Book Appointment</a></li>
           </ul>
         </li>
@@ -108,14 +163,14 @@
             <span>Departments</span>
           </a>
           <ul class="sub-menu">
-            <li><a href="./departments/department.html">Hospital Departments</a></li>
+            <li><a href="../departments/department.html">Hospital Departments</a></li>
             <li><a href="#" data-bs-toggle="modal" data-bs-target="#addDepartmentModal">+ Add New Department</a></li>
           </ul>
         </li>
 
         <!-- 6. Invoices -->
         <li class="nav-item">
-          <a href="./invoices.html" class="nav-link">
+          <a href="../invoices.html" class="nav-link">
             <i class="fa-solid fa-file-invoice-dollar"></i>
             <span>Invoices & Billing</span>
           </a>
@@ -123,7 +178,7 @@
 
         <!-- 7. Settings -->
         <li class="nav-item">
-          <a href="./settings.html" class="nav-link">
+          <a href="../settings.html" class="nav-link">
             <i class="fa-solid fa-gear"></i>
             <span>Settings</span>
           </a>
@@ -198,7 +253,7 @@
 
     <!-- Footer Link -->
     <div class="notif-footer text-center py-2 px-3 border-top bg-light">
-      <a href="./notifications.html" class="text-primary fw-medium fs-7 ">View All Notifications</a>
+      <a href="../notifications.html" class="text-primary fw-medium fs-7 ">View All Notifications</a>
     </div>
   </div>
 
@@ -218,7 +273,7 @@
         <!-- Admin Profile Dropdown -->
        <div class="dropdown profile-dropdown">
   <a href="#" class="profile-toggle" data-bs-toggle="dropdown" aria-expanded="false">
-    <img src="../images/adminpic.webp" class="avatar-img">
+    <img src="../../images/adminpic.webp" class="avatar-img">
     <div class="user-info-text">
       <span class="user-name">Mahnoor Asif</span>
       <span class="user-role">Administrator</span>
@@ -229,32 +284,32 @@
   <!-- Preclinic Style Admin Dropdown -->
   <ul class="dropdown-menu dropdown-menu-end shadow-sm border-0 p-2" style="width: 220px;">
     <!-- Profile Header Info -->
-    <li class="px-3 py-2 bg-light drop rounded mb-2">
+    <li class="px-3 py-2 bg-light rounded mb-2">
       <span class="d-block fw-bold text-dark fs-6">Mahnoor Asif</span>
       <small class="text-muted">Administrator</small>
     </li>
     
     <li>
-      <a class="dropdown-item rounded py-2" href="#">
+      <a class="dropdown-item rounded py-2" href="../profile.html">
         <i class="fa-regular fa-user me-2 text-primary"></i> Profile Settings
       </a>
     </li>
     <li>
-      <a class="dropdown-item rounded py-2" href="./settings.html">
+      <a class="dropdown-item rounded py-2" href="../settings.html">
         <i class="fa-solid fa-gear me-2 text-secondary"></i> Account Settings
       </a>
     </li>
     
     <!-- Quick Toggle Notifications -->
     <li class="dropdown-item rounded py-2 d-flex align-items-center justify-content-between">
-      <span class="not"><i class="fa-regular fa-bell me-2" ></i> Notifications</span>
+      <span><i class="fa-regular fa-bell me-2 text-warning"></i> Notifications</span>
       <div class="form-check form-switch m-0">
         <input class="form-check-input" type="checkbox" id="notifSwitch" checked style="cursor: pointer;">
       </div>
     </li>
 
     <li>
-      <a class="dropdown-item rounded py-2" href="invoices.html">
+      <a class="dropdown-item rounded py-2" href="../invoices.html">
         <i class="fa-solid fa-receipt me-2 text-success"></i> Transactions
       </a>
     </li>
@@ -275,168 +330,189 @@
     </header>
 
     <!-- DASHBOARD BODY CONTENT -->
-    <div class="content-body" style="padding: 24px;">
-<div class="container-fluid p-4">
-  
-  <!-- Main White Card Container -->
-  <div class="card border-0 shadow-sm rounded-4 bg-white p-4">
-    
-    <!-- Title & Top Horizontal Tabs (No Weird Side Buttons) -->
-    <div class="d-flex justify-content-between align-items-center  border-bottom  pb-3 mb-4">
-      <h4 class="fw-bold text-dark m-0">Account Settings</h4>
+    <div class="container-fluid py-4 px-4">
 
-      <!-- Top Horizontal Tabs -->
-      <ul class="nav nav-pills custom-profile-tabs" id="pills-tab" role="tablist">
-                <li class="nav-item" role="presentation">
-          <button class="nav-link active fw-semibold" id="pills-profile-tab" data-bs-toggle="pill" data-bs-target="#pills-profile" type="button" role="tab" title="Profile">
-            <i class="fa-solid fa-user me-2"></i><span class="tab-label">Profile</span>
-          </button>
-        </li>
-        <li class="nav-item" role="presentation">
-          <button class="nav-link fw-semibold" id="pills-security-tab" data-bs-toggle="pill" data-bs-target="#pills-security" type="button" role="tab" title="Security">
-            <i class="fa-solid fa-lock me-2"></i><span class="tab-label">Security</span>
-          </button>
-        </li>
-        <li class="nav-item noti" role="presentation">
-          <button class="nav-link fw-semibold" id="pills-notifications-tab" data-bs-toggle="pill" data-bs-target="#pills-notifications" type="button" role="tab" title="Notifications">
-            <i class="fa-solid fa-bell me-2"></i><span class="tab-label">Notifications</span>
-          </button>
-        </li>
-      </ul>
+ <!-- Welcome Blue Banner -->
+      <div class="row mb-4">
+        <div class="col-12">
+          <div class="p-4 rounded-4 text-white position-relative overflow-hidden shadow-sm ban" >
+            <div class="row align-items-center">
+              <div class="col-lg-8">
+                <span class="badge bg-white text-primary mb-2 px-3 py-1 fw-semibold rounded-pill" style="font-size: 11px; letter-spacing: 0.5px;">MEDIVIBE ADMIN WORKSPACE</span>
+                <h1 class="fw-bold mb-2 text-white" style="font-size: 28px;" id="greetingText">Good morning, Mahnoor</h1>
+                <p class="mb-0 text-white" style="font-size: 14px;">Monitor your hospital operations, doctors, and patient records efficiently.</p>
+              </div>
+              <div class="col-lg-4 text-lg-end mt-3 mt-lg-0">
+                <button class="btn btn-light text-primary fw-semibold px-4 py-2 rounded-pill shadow-sm" data-bs-toggle="modal" data-bs-target="#addDoctorModal" style="font-size: 13px;">
+                  <i class="fa-solid fa-plus me-2"></i> Add New Doctor
+                </button>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+
+<!-- Doctors Directory Header & Breadcrumb -->
+<div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-3">
+  <div>
+    <h4 class="fw-bold text-dark mb-1">Doctors Directory</h4>
+    <nav aria-label="breadcrumb">
+      <ol class="breadcrumb mb-0" style="font-size: 13px;">
+        <li class="breadcrumb-item"><a href="admin-dashboard.html" class="text-decoration-none text-muted">Dashboard</a></li>
+        <li class="breadcrumb-item active text-primary fw-semibold" aria-current="page">Doctors Directory</li>
+      </ol>
+    </nav>
+  </div>
+</div>
+
+<!-- Filters & Search Section -->
+<div class="card border-0 shadow-sm rounded-4 p-3 mb-4 bg-white">
+  <div class="row g-3 align-items-center">
+    <div class="col-md-5">
+      <div class="input-group">
+        <span class="input-group-text bg-light border-0 text-muted ps-3"><i class="fa-solid fa-search"></i></span>
+        <input type="text" id="doctorSearchInput" class="form-control bg-light border-0 py-2" placeholder="Search by Doctor Name, Specialization..." style="font-size: 14px;">
+      </div>
     </div>
-
-    <!-- Tab Contents -->
-    <div class="tab-content" id="pills-tabContent">
-      
-      <!-- TAB 1: PROFILE FORM -->
-      <div class="tab-pane fade show active" id="pills-profile" role="tabpanel">
-        
-        <!-- Profile Photo Area -->
-        <div class="d-flex align-items-center gap-3 mb-4 pb-3 border-bottom">
-          <img src="../images/adminpic.webp" alt="Profile" class="rounded-circle border" width="80" height="80">
-          <div>
-            <button type="button" class="btn change  btn-sm rounded-pill px-3" id="changePhotoBtn">
-              <i class="fa-solid fa-upload me-1"></i> Change Photo
-            </button>
-            <input type="file" id="profilePhotoInput" accept="image/png, image/jpeg" hidden>
-            <div class="text-muted small mt-1">JPG, PNG max 2MB</div>
-          </div>
-        </div>
-
-        <form>
-          <!-- Basic Info -->
-          <h6 class="fw-bold form-section-title  text-uppercase mb-3">Basic Information</h6>
-          <div class="row g-3 mb-4">
-            <div class="col-md-6">
-              <label class="form-label text-secondary small fw-semibold">First Name</label>
-              <input type="text" class="form-control bg-light border p-2.5 rounded-3" >
-            </div>
-            <div class="col-md-6">
-              <label class="form-label text-secondary small fw-semibold">Last Name</label>
-              <input type="text" class="form-control bg-light border p-2.5 rounded-3" >
-            </div>
-            <div class="col-md-6">
-              <label class="form-label text-secondary small fw-semibold">Email Address</label>
-              <input type="email" class="form-control bg-light border p-2.5 rounded-3" >
-            </div>
-            <div class="col-md-6">
-              <label class="form-label text-secondary small fw-semibold">Phone Number</label>
-              <input type="text" class="form-control bg-light border p-2.5 rounded-3" placeholder="92+">
-            </div>
-          </div>
-
-          <!-- Address Details -->
-          <h6 class="fw-bold form-section-title  text-uppercase mb-3">Address Details</h6>
-          <div class="row g-3 mb-4">
-            <div class="col-12">
-              <label class="form-label text-secondary small fw-semibold">Address Line</label>
-              <input type="text" class="form-control bg-light border p-2.5 rounded-3" >
-            </div>
-            <div class="col-md-6">
-              <label class="form-label text-secondary small fw-semibold">City</label>
-              <input type="text" class="form-control bg-light border p-2.5 rounded-3" >
-            </div>
-            <div class="col-md-6">
-              <label class="form-label text-secondary small fw-semibold">Country</label>
-              <input type="text" class="form-control bg-light border p-2.5 rounded-3" >
-            </div>
-          </div>
-
-          <!-- Save Button -->
-          <div class="text-end border-top pt-3">
-            <button type="submit" class="btn sub-btn-anim px-4 py-2 rounded-3 fw-bold">
-    <span class="wave-text">
-      <span style="--i:0">S</span><span style="--i:1">a</span><span style="--i:2">v</span><span style="--i:3">e</span><span style="--i:4">&nbsp;</span><span style="--i:5">C</span><span style="--i:6">h</span><span style="--i:7">a</span><span style="--i:8">n</span><span style="--i:9">g</span><span style="--i:10">e</span><span style="--i:11">s</span>
-    </span>
-  </button>
-          </div>
-        </form>
-
-      </div>
-
-      <!-- TAB 2: SECURITY -->
-
-      <div class="tab-pane fade" id="pills-security" role="tabpanel">
-        <h6 class="fw-bold form-section-title  text-uppercase mb-3">Password Management</h6>
-        <form>
-          <div class="row g-3 max-w-md mb-4">
-            <div class="col-12">
-              <label class="form-label text-secondary small fw-semibold">Current Password</label>
-              <input type="password" class="form-control bg-light border p-2.5 rounded-3">
-            </div>
-            <div class="col-md-6">
-              <label class="form-label text-secondary small fw-semibold">New Password</label>
-              <input type="password" class="form-control bg-light border p-2.5 rounded-3">
-            </div>
-            <div class="col-md-6">
-              <label class="form-label text-secondary small fw-semibold">Confirm New Password</label>
-              <input type="password" class="form-control bg-light border p-2.5 rounded-3">
-            </div>
-          </div>
-          <div class="text-end border-top pt-3">
-            <button type="submit" class="btn sub-btn-anim px-4 py-2 rounded-3 fw-bold">
-  <span class="wave-text">
-    <span style="--i:0">U</span><span style="--i:1">p</span><span style="--i:2">d</span><span style="--i:3">a</span><span style="--i:4">t</span><span style="--i:5">e</span><span style="--i:6">&nbsp;</span><span style="--i:7">P</span><span style="--i:8">a</span><span style="--i:9">s</span><span style="--i:10">s</span><span style="--i:11">w</span><span style="--i:12">o</span><span style="--i:13">r</span><span style="--i:14">d</span>
-  </span>
-</button>
-          </div>
-        </form>
-      </div>
-
-      <!-- TAB 3: NOTIFICATIONS -->
-      <div class="tab-pane fade" id="pills-notifications" role="tabpanel">
-        <h6 class="fw-bold form-section-title  text-uppercase mb-3">Alert Preferences</h6>
-        <div class="d-flex justify-content-between em align-items-center p-3 bg-light rounded-3 mb-2 border">
-          <div>
-            <div class="fw-bold text-dark">Email Notifications</div>
-            <div class="small text-muted">Receive email updates for new patient appointments</div>
-          </div>
-          <div class="form-check form-switch">
-            <input class="form-check-input" type="checkbox" checked>
-          </div>
-        </div>
-      </div>
-
+    <div class="col-md-4">
+      <select id="departmentFilter" class="form-select bg-light border-0 py-2 text-muted" style="font-size: 14px;">
+        <option value="">Filter by Department</option>
+        <option value="Cardiology">Cardiology</option>
+        <option value="Neurology">Neurology</option>
+        <option value="Pediatrics">Pediatrics</option>
+        <option value="Orthopedics">Orthopedics</option>
+        <option value="Dermatology">Dermatology</option>
+        <option value="Dentistry">Dentistry</option>
+      </select>
+    </div>
+    <div class="col-md-3 text-md-end">
+      <span class="text-muted fw-medium" style="font-size: 13px;">Total Active: <strong class="text-dark" id="totalDoctorsCount">0</strong></span>
     </div>
   </div>
-</div>       
-    </div>
+</div>
+
+<!-- Dynamic Doctors Grid Container -->
+<div class="row g-4" id="doctorsGridContainer">
+  <!-- JavaScript yahan dynamic cards render karega -->
+</div>
+
+</div>
 <footer class="admin-footer text-center py-3 border-top mt-auto">
       <p class="text-muted mb-0" style="font-size: 13px;">2026 © Medivibe, All Rights Reserved</p>
-</footer>
+    </footer>
+<!-- /container-fluid wrapper -->
+
+<!-- JavaScript for Dynamic Rendering & Search -->
+<script>
+  let doctorsData = [
+    { id: "doc1", name: "Dr. Michael Smith", specialization: "Cardiologist", department: "Cardiology", available: "Available : Thu, 05 Feb 2026", charge: "$300", image: "https://ui-avatars.com/api/?name=Michael+Smith&background=e0e7ff&color=4338ca&size=128", status: "active" },
+    { id: "doc2", name: "Dr. Sarah Johnson", specialization: "Surgeon", department: "Neurology", available: "Available : Mon, 09 Feb 2026", charge: "$500", image: "https://ui-avatars.com/api/?name=Sarah+Johnson&background=e0e7ff&color=4338ca&size=128", status: "active" },
+    { id: "doc3", name: "Dr. Adrian White", specialization: "Practitioner", department: "Pediatrics", available: "Available : Tue, 17 Feb 2026", charge: "$400", image: "https://ui-avatars.com/api/?name=Adrian+White&background=e0e7ff&color=4338ca&size=128", status: "active" },
+    { id: "doc4", name: "Dr. Ken Clark", specialization: "Dermatologist", department: "Orthopedics", available: "Available : Wed, 12 Feb 2026", charge: "$350", image: "https://ui-avatars.com/api/?name=Ken+Clark&background=e0e7ff&color=4338ca&size=128", status: "inactive" },
+    { id: "doc5", name: "Dr. Nida Farooq", specialization: "Skin Specialist", department: "Dermatology", available: "Available : Fri, 20 Feb 2026", charge: "$250", image: "https://ui-avatars.com/api/?name=Nida+Farooq&background=e0e7ff&color=4338ca&size=128", status: "active" },
+    { id: "doc6", name: "Dr. Omar Siddiqui", specialization: "Dental Surgeon", department: "Dentistry", available: "Available : Sat, 21 Feb 2026", charge: "$180", image: "https://ui-avatars.com/api/?name=Omar+Siddiqui&background=e0e7ff&color=4338ca&size=128", status: "active" },
+  ];
+
+  const deptColors = {
+    Cardiology:  { bg: "#e0f2fe", color: "#0284c7" },
+    Neurology:   { bg: "#fee2e2", color: "#ef4444" },
+    Pediatrics:  { bg: "#dcfce7", color: "#16a34a" },
+    Orthopedics: { bg: "#fef3c7", color: "#b45309" },
+    Dermatology: { bg: "#fce7f3", color: "#db2777" },
+    Dentistry:   { bg: "#e0e7ff", color: "#4338ca" },
+  };
+
+  function renderDoctors(data) {
+    const container = document.getElementById('doctorsGridContainer');
+    const activeCount = data.filter(d => d.status === "active").length;
+    document.getElementById('totalDoctorsCount').innerText = activeCount;
+    container.innerHTML = '';
+
+    if (data.length === 0) {
+      container.innerHTML = `<div class="col-12 text-center py-5"><p class="text-muted">No doctors found matching your search.</p></div>`;
+      return;
+    }
+
+    data.forEach(doc => {
+      const dept = deptColors[doc.department] || { bg: "#eef2ff", color: "#4338ca" };
+      const statusPillClass = doc.status === "active" ? "status-completed" : "status-cancelled";
+      const statusLabel = doc.status === "active" ? "Active" : "Inactive";
+      const toggleLabel = doc.status === "active" ? "Inactivate" : "Activate";
+      const toggleIcon = doc.status === "active" ? "fa-ban" : "fa-check";
+
+      container.innerHTML += `
+        <div class="col-xl-3 col-sm-6">
+          <div class="card doctor-dir-card border-0 shadow-sm rounded-4 p-4 h-100 bg-white position-relative overflow-hidden">
+
+            <div class="d-flex justify-content-between align-items-start mb-3">
+              <span class="badge fw-semibold px-2 py-1 rounded-pill" style="font-size: 11px; background:${dept.bg}; color:${dept.color};">${doc.department}</span>
+              <div class="dropdown">
+                <button class="btn btn-light btn-sm rounded-circle border-0 text-muted" type="button" data-bs-toggle="dropdown"><i class="fa-solid fa-ellipsis-vertical"></i></button>
+                <ul class="dropdown-menu dropdown-menu-end border-0 shadow-sm rounded-3">
+                  <li><a class="dropdown-item py-2 px-3 text-dark" href="doctor-profile.html?id=${doc.id}" style="font-size: 13px;"><i class="fa-solid fa-eye me-2 text-primary"></i> View Details</a></li>
+                  <li><a class="dropdown-item py-2 px-3 ${doc.status === 'active' ? 'text-danger' : 'text-success'}" href="#" onclick="toggleDoctorStatus('${doc.id}'); return false;" style="font-size: 13px;"><i class="fa-solid ${toggleIcon} me-2"></i> ${toggleLabel}</a></li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="text-center mb-3">
+              <img src="${doc.image}" alt="${doc.name}" class="rounded-circle shadow-sm mb-3 doctor-dir-avatar" onerror="this.onerror=null;this.src='https://ui-avatars.com/api/?name=${encodeURIComponent(doc.name)}&background=e0e7ff&color=4338ca&size=128';">
+              <h5 class="fw-bold mb-1 text-dark" style="font-size: 16px;">
+                <a href="doctor-profile.html?id=${doc.id}" class="text-decoration-none text-dark stretched-link">${doc.name}</a>
+              </h5>
+              <span class="text-muted d-block mb-2" style="font-size: 13px;">${doc.specialization}</span>
+              <span class="doctor-status-pill ${statusPillClass}">${statusLabel}</span>
+            </div>
+
+            <div class="doctor-dir-fee-box rounded-3 p-2 text-center mt-auto">
+              <span class="text-muted d-block mb-1">${doc.available}</span>
+              <span class="fw-bold text-dark">Starts From : <span class="text-primary">${doc.charge}</span></span>
+            </div>
+
+          </div>
+        </div>
+      `;
+    });
+  }
+
+  renderDoctors(doctorsData);
+
+  document.getElementById('doctorSearchInput').addEventListener('input', function (e) {
+    const term = e.target.value.toLowerCase();
+    const deptVal = document.getElementById('departmentFilter').value;
+    const filtered = doctorsData.filter(d =>
+      (d.name.toLowerCase().includes(term) || d.specialization.toLowerCase().includes(term)) &&
+      (deptVal === "" || d.department === deptVal)
+    );
+    renderDoctors(filtered);
+  });
+
+  document.getElementById('departmentFilter').addEventListener('change', function (e) {
+    const dept = e.target.value;
+    const term = document.getElementById('doctorSearchInput').value.toLowerCase();
+    const filtered = doctorsData.filter(d =>
+      (dept === "" || d.department === dept) &&
+      (d.name.toLowerCase().includes(term) || d.specialization.toLowerCase().includes(term))
+    );
+    renderDoctors(filtered);
+  });
+
+  function toggleDoctorStatus(id) {
+    const doc = doctorsData.find(d => d.id === id);
+    if (!doc) return;
+    doc.status = doc.status === "active" ? "inactive" : "active";
+    document.getElementById('doctorSearchInput').dispatchEvent(new Event('input'));
+  }
+</script>
+
   </main>
   <!-- MAIN CONTENT AREA END -->
 
-
-
-  
 </div>
 
 
 
-
 <!--   modals overalll -->
-
 <div class="modal fade" id="addDoctorModal" tabindex="-1" aria-labelledby="addDoctorModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content border-0 rounded-4 shadow">
@@ -536,7 +612,6 @@
   </div>
 </div>
 </div>
-
 
 <!-- modal 2 -->
 
@@ -725,7 +800,17 @@
 
 
 
- 
+
+
+
+
+
+
+
+
+
+
+
 <!-- <div class="glow-cursor-dot"></div>
 <div class="glow-cursor-trail"></div> -->
 
@@ -733,6 +818,6 @@
   <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js" integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r" crossorigin="anonymous"></script>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js" integrity="sha384-G/EV+4j2dNv+tEPo3++6LCgdCROaejBqfUeNjuKAiuXbjrxilcCdDz6ZAVfHWe1Y" crossorigin="anonymous"></script>
 
-    <script src="./admin.js"></script>
+    <script src="../admin.js"></script>
 </body>
 </html>
