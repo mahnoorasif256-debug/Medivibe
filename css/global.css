@@ -1,0 +1,605 @@
+/* css/global.css */
+
+:root {
+    /* Main Theme Colors */
+    --primary-blue: #135dd8;       /* Standard blue jo buttons/hovers par hai */
+    --navy-dark: #0c1a30;          /* Dropdown background color */
+    --deep-blue: #121095;          /* Social icon hover aur button gradient color */
+    --text-dark: #444444;          /* Nav links text color */
+    --white: #ffffff;
+    --black: #000000;
+
+    /* Gradients */
+    --top-bar-gradient: linear-gradient(90deg, rgba(2, 0, 36, 1) 0%, rgba(9, 9, 121, 1) 0%, rgba(0, 212, 255, 1) 100%);
+    --btn-gradient-start: linear-gradient(to right, #121095 0%, #121095 50%, #00f0ff 100%);
+    --btn-gradient-hover: linear-gradient(to left, #121095 0%, #121095 50%, #00f0ff 100%);
+
+    /* Fonts */
+    --font-roboto: 'Roboto', sans-serif;
+
+    /* Transitions & Shadows */
+    --transition-smooth: all 0.3s ease;
+    --transition-btn: background-position 0.5s cubic-bezier(0.25, 0.8, 0.25, 1), box-shadow 0.4s ease;
+    --nav-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+    --btn-shadow: 0 4px 15px rgba(0, 240, 255, 0.15);
+    --btn-shadow-hover: 0 6px 20px rgba(0, 240, 255, 0.3);
+}
+
+
+           /* admin kay variables  */
+
+:root {
+    /* Brand & Accent Colors */
+    --navy-dark: #0c1a30;        
+    --navy-darker: #06101c;       
+    --navy-sidebar: #0b1329;
+    --hover-light-blue: #3a86ff;  
+    --text-inactive: #a0aec0;     
+    --deep-blue: #121095;  
+    --white: #ffffff;
+    --primary-blue: #0284c7;
+    --primary-blue-dark: #0277b2;
+    --primary-blue-light: #0369a1;
+    --accent-cyan: #00b4d8;
+    --accent-light-cyan: #4fe9ff;
+    --accent-sky: #38bdf8;
+    --accent-hover-cyan: #64dfdf;
+    --accent-gradient-blue: #103c65;
+    --red-danger: #ef4444;
+    --active-item-blue: #2563eb;
+
+    /* Text & Neutral Shades */
+    --text-primary: #0f172a;
+    --text-muted: #94a3b8;
+    --text-secondary: #64748b;
+    --text-dark: #334155;
+    --menu-label-color: #667891;
+
+    /* Backgrounds & Borders */
+    --bg-main: #f8fafc;
+    --bg-hover-light: #f1f5f9;
+    --border-light: #e2e8f0;
+    --border-subtle: #cbd5e1;
+    --border-dark-state: #1e293b;
+    --border-translucent-5: rgba(255, 255, 255, 0.05);
+    --border-translucent-8: rgba(255, 255, 255, 0.08);
+
+    /* Shadows & Effects */
+    --shadow-cyan-glow: rgba(0, 180, 216, 0.6);
+    --shadow-cyan-hover: rgba(0, 180, 216, 0.9);
+    --shadow-cyan-soft: rgba(0, 180, 216, 0.2);
+    --shadow-cyan-drop: rgba(0, 180, 216, 0.4);
+    --shadow-blue-btn: rgba(2, 119, 189, 0.25);
+    --shadow-blue-btn-hover: rgba(2, 132, 199, 0.45);
+    --shadow-active-card: rgba(0, 25, 60, 0.24);
+    --shadow-dark-card: rgba(15, 23, 42, 0.1);
+    --shadow-switch-circle: rgba(2, 132, 199, 0.3);
+    --shadow-switch-dark: rgba(0, 0, 0, 0.4);
+
+    /* Typography */
+    --font-roboto: 'Roboto', sans-serif;
+
+    /* Status / Feedback Colors (light theme base) */
+    --success-green: #16a34a;
+    --success-green-bg: #dcfce7;
+    --danger-red-bg: #fee2e2;
+    --danger-red-border: #fecaca;
+    --danger-red-dark: #dc2626;
+    --info-blue-bg: #f0f9ff;
+    --info-cyan-border: #7dd3fc;
+    --border-extra-light: #f8f9fa;
+
+    /* Status / Feedback Colors (dark theme variants) */
+    --dark-surface-subtle: rgba(255, 255, 255, 0.04);
+    --info-blue-bg-dark: rgba(2, 132, 199, 0.10);
+    --info-cyan-border-dark: rgba(56, 189, 248, 0.35);
+    --danger-red-border-dark: rgba(239, 68, 68, 0.35);
+}
+
+
+
+/* theme toggle variables */
+
+
+
+/* --- Ultimate Dark Theme Fixes --- */
+body.dark-theme {
+  color: #ffffff !important;
+}
+
+/* Sidebar in Dark Mode */
+body.dark-theme .sidebar {
+  background-color: var(--navy-darker, #06101c) !important;
+  border-right-color: var(--border-dark-state, #1e293b) !important;
+}
+
+/* Main Cards / Containers */
+body.dark-theme .card {
+  background-color: var(--navy-dark, #0c1a30) !important;
+  color: #ffffff !important;
+  border: 1px solid var(--border-dark-state, #1e293b) !important;
+}
+
+/* Top Header */
+body.dark-theme .main-header {
+  background-color: var(--navy-dark, #0c1a30) !important;
+  border-bottom: 1px solid var(--border-dark-state, #1e293b) !important;
+}
+
+/* Form Inputs & Controls */
+body.dark-theme .form-control,
+body.dark-theme .form-select {
+  background-color: var(--navy-sidebar, #0b1329) !important;
+  color: #ffffff !important;
+  border-color: var(--border-dark-state, #1e293b) !important;
+}
+
+body.dark-theme .form-control::placeholder {
+  color: #94a3b8 !important;
+}
+
+body.dark-theme .form-control:focus {
+  background-color: var(--navy-sidebar, #0b1329) !important;
+  color: #ffffff !important;
+  border-color: var(--accent-cyan, #00b4d8) !important;
+}
+
+/* Force All Headings, Labels & Text to White in Dark Mode */
+body.dark-theme h1, 
+body.dark-theme h2, 
+body.dark-theme h3, 
+body.dark-theme h4, 
+body.dark-theme h5, 
+body.dark-theme h6,
+body.dark-theme label,
+body.dark-theme span,
+body.dark-theme p,
+body.dark-theme div,
+body.dark-theme .text-dark,
+body.dark-theme .text-muted,
+body.dark-theme .text-secondary {
+  color: #ffffff !important;
+}
+
+/* Specific fix for sub-text or muted text if you want them slightly dimmer, otherwise all white */
+body.dark-theme .text-muted-custom {
+  color: #94a3b8 !important;
+}
+
+
+/* profile toggle hover */
+
+
+body.dark-theme    .profile-toggle:hover{
+  background-color: var(--navy-dark, #0c1a30) !important;
+
+}
+
+
+body.dark-theme    .dropdown-menu{
+  background-color: var(--navy-dark, #0c1a30) !important;
+
+}
+
+body.dark-theme    .dropd{
+  background-color: var(--navy-dark, #0c1a30) !important;
+
+}
+
+
+
+ body.dark-theme  .dropdown-menu .bg-light {
+    background-color: var(--navy-dark, #0c1a30) !important;
+
+}
+
+
+body.dark-theme  .dropdown-menu .dropdown-item {
+  color: var( --white) !important;
+
+}
+
+
+body.dark-theme .dropdown-menu .dropdown-item:hover,
+body.dark-theme .dropdown-menu li > a.dropdown-item:hover,
+body.dark-theme .notification-item:hover {
+  background-color: var(--navy-sidebar, #0b1329) !important; /* Agar background thora different ya wahi rakhna hai */
+  color: var(--active-item-blue, #2563eb) !important;
+  transform: translateX(4px);
+}
+
+
+
+
+body.dark-theme  .custom-profile-tabs {
+    background-color: var(--navy-sidebar, #0b1329) !important; 
+}
+
+
+
+/* --- Account Settings Nav Tabs Fix in Dark Theme --- */
+body.dark-theme .custom-profile-tabs .nav-link {
+  color: var(--text-muted, #94a3b8) !important;
+  background-color: transparent !important;
+}
+
+body.dark-theme .custom-profile-tabs .nav-link:hover {
+  color: #ffffff !important;
+  background-color: var(--border-dark-state, #1e293b) !important;
+}
+
+body.dark-theme .custom-profile-tabs .nav-link.active {
+  background-color: var(--primary-blue, #0284c7) !important;
+  color: #ffffff !important;
+}
+
+
+
+
+/* --- Remove All Unwanted White Lines & Borders in Dark Theme --- */
+body.dark-theme hr,
+body.dark-theme .border-bottom,
+body.dark-theme .border-top,
+body.dark-theme .border {
+  border-color: var(--border-dark-state, #1e293b) !important;
+}
+
+
+body.dark-theme .d-flex.border-bottom {
+  border-bottom: 1px solid var(--border-dark-state, #1e293b) !important;
+}
+
+
+body.dark-theme .custom-profile-tabs{
+    background: var(--text-dark) !important;
+
+}
+
+
+
+/* Account Settings header ya separator line fix */
+body.dark-theme .main-header,
+body.dark-theme .tab-content,
+body.dark-theme .card-header {
+  border-color: var(--border-dark-state, #1e293b) !important;
+}
+
+
+body.dark-theme hr {
+  opacity: 0.15;
+  background-color: var(--border-dark-state, #1e293b) !important;
+}
+
+
+
+body.dark-theme .em{
+      background-color: var(--navy-dark, #0c1a30) !important;
+
+}
+
+
+
+
+body.dark-theme .main-content {
+  background-color: var(--navy-darker, #06101c) !important;
+}
+
+/* notifications dropdown */
+
+
+body.dark-theme .notif-dropdown-menu {
+  background-color: var(--navy-dark, #0c1a30) !important;
+}
+
+body.dark-theme .notif-header {
+  background-color: var(--navy-dark, #0c1a30) !important;
+  border-bottom: 1px solid var(--border-dark-state, #1e293b) !important;
+}
+
+body.dark-theme .notif-item:hover {
+  background-color: var(--navy-sidebar, #0b1329) !important;
+}
+
+body.dark-theme .notif-item.unread {
+  background-color: rgba(0, 180, 216, 0.08) !important;
+}
+
+body.dark-theme .notif-item.unread:hover {
+  background-color: rgba(0, 180, 216, 0.15) !important;
+}
+
+body.dark-theme .notif-time,
+body.dark-theme .notif-empty {
+  color: var(--text-muted, #94a3b8) !important;
+}
+
+body.dark-theme .notif-footer a {
+  color: var(--accent-cyan, #00b4d8) !important;
+}
+
+body.dark-theme .notif-close:hover {
+  background-color: var(--border-dark-state, #1e293b) !important;
+  color: #ffffff !important;
+}
+
+
+body.dark-theme .notif-content p,
+body.dark-theme .notif-content p b,
+body.dark-theme .notif-header .fw-bold {
+  color: #ffffff !important;
+}
+
+
+
+/* Notifications full page - unread card background */
+body.dark-theme #notifications-container .bg-light {
+  background-color: var(--navy-sidebar, #0b1329) !important;
+}
+
+body.dark-theme #notifications-container > div {
+  border-color: var(--border-dark-state, #1e293b) !important;
+}
+
+body.dark-theme #notifications-container small.text-muted {
+  color: var(--text-muted, #94a3b8) !important;
+}
+
+/* Delete all button (notifications page) */
+body.dark-theme #clear-all {
+  background-color: var(--navy-dark, #0c1a30) !important;
+  color: var(--red-danger, #ef4444) !important;
+  border-color: var(--red-danger, #ef4444) !important;
+}
+
+body.dark-theme #clear-all::before,
+body.dark-theme #clear-all::after {
+  background: var(--red-danger, #ef4444) !important;
+}
+
+body.dark-theme #clear-all:hover {
+  color: #ffffff !important;
+}
+
+
+body.dark-theme .button {
+  background-color: #0e0d0d !important;
+  color: var(--primary-blue, #0284c7) !important;
+  border-color: var(--primary-blue, #0284c7) !important;
+}
+
+body.dark-theme .button:hover {
+  color: #ffffff !important;
+}
+
+
+
+/* Card shell background + border */
+body.dark-theme .mv-card {
+  background-color: var(--navy-dark, #0c1a30) !important;
+  border: 1px solid var(--border-dark-state, #1e293b) !important;
+  box-shadow: none !important;
+}
+
+/* Card header subtitle text */
+body.dark-theme .mv-card-header p {
+  color: var(--text-muted, #94a3b8) !important;
+}
+
+/* Chart legend labels */
+body.dark-theme .mv-legend-item {
+  color: var(--text-muted, #94a3b8) !important;
+}
+
+/* Donut chart center label */
+body.dark-theme .mv-donut-center .val {
+  color: #ffffff !important;
+}
+body.dark-theme .mv-donut-center .lbl {
+  color: var(--text-muted, #94a3b8) !important;
+}
+
+/* Doctors mini widget */
+body.dark-theme .doctor-mini-card:hover {
+  background-color: var(--navy-sidebar, #0b1329) !important;
+}
+body.dark-theme .doctor-avatar {
+  border-color: var(--border-dark-state, #1e293b) !important;
+}
+body.dark-theme .doctor-stars .far {
+  color: var(--border-dark-state, #1e293b) !important;
+}
+
+/* Appointments table */
+body.dark-theme .mv-table thead th {
+  color: var(--text-muted, #94a3b8) !important;
+  border-bottom-color: var(--border-dark-state, #1e293b) !important;
+}
+body.dark-theme .mv-table tbody td {
+  border-bottom-color: var(--border-dark-state, #1e293b) !important;
+  color: #ffffff !important;
+}
+body.dark-theme .mv-table tbody tr:hover {
+  background-color: var(--navy-sidebar, #0b1329) !important;
+}
+body.dark-theme .mv-person .sub {
+  color: var(--text-muted, #94a3b8) !important;
+}
+
+/* Department tags — soften on dark background */
+body.dark-theme .dept-tag {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  color: #c7d2fe !important;
+}
+
+/* Doctor specialization badges — soften on dark background */
+body.dark-theme .doctor-spec-badge {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  color: #c7d2fe !important;
+}
+
+/* Status pills — richer contrast on dark background */
+body.dark-theme .status-checked-in      { background: rgba(2, 132, 199, 0.18) !important; color: #38bdf8 !important; }
+body.dark-theme .status-in-consultation { background: rgba(180, 83, 9, 0.18)  !important; color: #fbbf24 !important; }
+body.dark-theme .status-completed       { background: rgba(22, 163, 74, 0.18) !important; color: #4ade80 !important; }
+body.dark-theme .status-cancelled       { background: rgba(239, 68, 68, 0.18) !important; color: #f87171 !important; }
+
+/* Status pill DOTS (the little ::before circle). admin.html never had a dark-mode
+   version of these at all, and doctors.html's own version could get shadowed, so pin
+   them here with !important as one single source of truth for every page. */
+body.dark-theme .status-checked-in::before      { background: #38bdf8 !important; }
+body.dark-theme .status-in-consultation::before { background: #fbbf24 !important; }
+body.dark-theme .status-completed::before       { background: #4ade80 !important; }
+body.dark-theme .status-cancelled::before       { background: #f87171 !important; }
+
+/* And make sure the LIGHT-mode dot always resolves too, in case a page's own
+   ::before rule is ever missing or a --variable isn't in scope. */
+.status-checked-in::before      { background: #0284c7 !important; }
+.status-in-consultation::before { background: #b45309 !important; }
+.status-completed::before       { background: #16a34a !important; }
+.status-cancelled::before       { background: #ef4444 !important; }
+
+/* Gradient button stays legible on dark background */
+body.dark-theme .mv-btn-gradient {
+  color: #ffffff !important;
+}
+
+
+/* Force the table itself (and Bootstrap's --bs-table-bg variable) to go transparent in dark mode */
+body.dark-theme .mv-table,
+body.dark-theme .mv-table > thead,
+body.dark-theme .mv-table > tbody,
+body.dark-theme .mv-table thead tr,
+body.dark-theme .mv-table tbody tr,
+body.dark-theme .mv-table thead th,
+body.dark-theme .mv-table tbody td {
+  background-color: transparent !important;
+  --bs-table-bg: transparent !important;
+  --bs-table-color: #ffffff !important;
+}
+
+/* Patient / Doctor name text inside table rows */
+body.dark-theme .mv-person .name {
+  color: #ffffff !important;
+}
+
+
+/* --- Generic Bootstrap .bg-light / .table-light fix (card headers, table headers, notif footer, input icons) --- */
+/* These are plain Bootstrap utility classes used across all pages for card header bars and table headers.
+   Without this, they stay white/light even when body.dark-theme is active, making text unreadable. */
+body.dark-theme .bg-light {
+  background-color: var(--navy-sidebar, #0b1329) !important;
+}
+
+body.dark-theme .table-light,
+body.dark-theme .table-light > th,
+body.dark-theme .table-light > td,
+body.dark-theme thead.table-light tr,
+body.dark-theme thead.table-light th {
+  background-color: var(--navy-sidebar, #0b1329) !important;
+  --bs-table-bg: var(--navy-sidebar, #0b1329) !important;
+  color: var(--text-muted, #94a3b8) !important;
+  border-color: var(--border-dark-state, #1e293b) !important;
+}
+
+body.dark-theme .input-group-text.bg-light {
+  background-color: var(--navy-sidebar, #0b1329) !important;
+  color: var(--text-muted, #94a3b8) !important;
+  border-color: var(--border-dark-state, #1e293b) !important;
+}
+
+/* Tables that aren't .mv-table (plain Bootstrap tables like #appointmentsTable) also need a transparent tbody
+   so the dark card background shows through instead of Bootstrap's default white table background. */
+body.dark-theme .table:not(.table-light),
+body.dark-theme .table > tbody,
+body.dark-theme .table > tbody > tr,
+body.dark-theme .table > tbody > tr > td {
+  background-color: transparent !important;
+  --bs-table-bg: transparent !important;
+  border-color: var(--border-dark-state, #1e293b) !important;
+}
+
+body.dark-theme .table-hover > tbody > tr:hover > * {
+  background-color: var(--navy-sidebar, #0b1329) !important;
+  --bs-table-bg-hover: var(--navy-sidebar, #0b1329) !important;
+}
+
+/* Bootstrap "subtle" badges (department tags, status badges) used across tables/cards.
+   Without this they inherit the site-wide forced-white span text color, which is unreadable
+   on their light pastel backgrounds. Give each variant a proper dark-mode treatment. */
+body.dark-theme .badge.bg-primary-subtle { background-color: rgba(2, 132, 199, 0.18) !important; color: #38bdf8 !important; }
+body.dark-theme .badge.bg-success-subtle { background-color: rgba(22, 163, 74, 0.18) !important; color: #4ade80 !important; }
+body.dark-theme .badge.bg-warning-subtle { background-color: rgba(180, 83, 9, 0.18) !important; color: #fbbf24 !important; }
+body.dark-theme .badge.bg-danger-subtle  { background-color: rgba(239, 68, 68, 0.18) !important; color: #f87171 !important; }
+body.dark-theme .badge.bg-info-subtle    { background-color: rgba(6, 182, 212, 0.18) !important; color: #22d3ee !important; }
+
+/* --- Bootstrap Modals: no dark-theme handling existed anywhere, so every modal stayed white --- */
+body.dark-theme .modal-content {
+  background-color: var(--navy-dark, #0c1a30) !important;
+  color: #ffffff !important;
+  border: 1px solid var(--border-dark-state, #1e293b) !important;
+}
+body.dark-theme .modal-header,
+body.dark-theme .modal-footer {
+  border-color: var(--border-dark-state, #1e293b) !important;
+}
+body.dark-theme .modal-title {
+  color: #ffffff !important;
+}
+body.dark-theme .modal .btn-close {
+  filter: invert(1) grayscale(100%) brightness(200%);
+}
+body.dark-theme .modal label {
+  color: var(--text-muted, #94a3b8) !important;
+}
+
+/* --- .btn-light used as a plain action button across every page (Upload Logo, kebab menus, etc.) --- */
+body.dark-theme .btn-light {
+  background-color: var(--navy-sidebar, #0b1329) !important;
+  color: #ffffff !important;
+  border-color: var(--border-dark-state, #1e293b) !important;
+}
+body.dark-theme .btn-light:hover {
+  background-color: var(--border-dark-state, #1e293b) !important;
+}
+body.dark-theme .btn-light.text-primary {
+  color: var(--accent-cyan, #00b4d8) !important;
+}
+body.dark-theme .btn-light.text-muted {
+  color: var(--text-muted, #94a3b8) !important;
+}
+
+/* --- Decorative badge that sits on the blue gradient banner (always needs blue-on-white, in both themes) --- */
+body.dark-theme .badge.bg-white {
+  background-color: #ffffff !important;
+  color: var(--primary-blue, #0284c7) !important;
+}
+
+body.dark-theme .doctor-dir-card .badge[style*="background"] {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  color: #c7d2fe !important;
+}
+
+body.dark-theme .status-online{
+  color:var( --success-green )!important;
+}
+
+/* Dark mode mein departments grid ke andar ke inline background/color wale badges ko override karne ke liye */
+body.dark-theme #departmentsGrid [style*="background"] {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  color: #c7d2fe !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+
+/* Dark mode mein sabhi badges aur icon circles ke inline styles ko override karne ke liye */
+body.dark-theme .badge[style*="background"],
+body.dark-theme .fin-icon-circle[style*="background"],
+body.dark-theme div[style*="background"] {
+  background-color: rgba(255, 255, 255, 0.08) !important;
+  color: #c7d2fe !important;
+  border-color: rgba(255, 255, 255, 0.1) !important;
+}
+
+body.dark-theme [style*="color"] {
+  color: #c7d2fe !important;
+}
