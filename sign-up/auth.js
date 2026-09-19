@@ -343,7 +343,7 @@ formLogin.addEventListener("submit", async (e) => {
                 return;
             }
 
-            window.location.href = "patient-dashboard.html";
+            window.location.href = "./patient-dashboard/patient-dashboard.html";
 
         } else if (activeRole === "ADMIN") {
             if (userData.role !== "ADMIN") {
