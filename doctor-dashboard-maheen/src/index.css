@@ -1,0 +1,112 @@
+:root {
+  --primary-blue: #135dd8;
+  --navy-dark: #0c1a30;
+  --deep-blue: #121095;
+  --text-main: #2d3748;
+  --text-muted: #64748b;
+  --bg-page: #f8fafc;
+  --bg-glass: rgba(255, 255, 255, 0.95);
+  --border-glass: rgba(226, 232, 240, 0.8);
+  --border-radius-card: 24px;
+  --shadow-rest: 0 10px 30px -10px rgba(12, 26, 48, 0.05);
+  --ease-awwwards: cubic-bezier(0.22, 1, 0.36, 1);
+
+  /* Compatibility bindings */
+  --bg-main: var(--bg-page);
+  --card-bg: var(--bg-glass);
+  --border-color: var(--border-glass);
+  --text-primary: var(--text-main);
+  --text-secondary: var(--text-muted);
+  --accent-blue: var(--primary-blue);
+  --accent-vibe: var(--primary-blue);
+  --accent-teal: #0d9488;
+}
+
+html.dark, body.dark {
+  --primary-blue: #3b82f6;
+  --navy-dark: #0c1a30;
+  --deep-blue: #1d4ed8;
+  --text-main: #f1f5f9;
+  --text-muted: #94a3b8;
+  --bg-page: #0a0f1d;
+  --bg-glass: rgba(17, 25, 46, 0.95);
+  --border-glass: rgba(30, 41, 59, 0.8);
+  --border-radius-card: 24px;
+  --shadow-rest: 0 10px 30px -10px rgba(0, 0, 0, 0.3);
+  --ease-awwwards: cubic-bezier(0.22, 1, 0.36, 1);
+
+  --bg-main: var(--bg-page);
+  --card-bg: var(--bg-glass);
+  --border-color: var(--border-glass);
+  --text-primary: var(--text-main);
+  --text-secondary: var(--text-muted);
+  --accent-blue: var(--primary-blue);
+  --accent-vibe: var(--primary-blue);
+  --accent-teal: #2dd4bf;
+}
+
+*, *::before, *::after {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  min-width: 0;
+}
+
+html, body {
+  overflow-x: hidden;
+  width: 100%;
+}
+
+body {
+  background-color: var(--bg-page);
+  color: var(--text-main);
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Crisp selection styling */
+::selection {
+  background-color: rgba(19, 93, 216, 0.25);
+  color: inherit;
+}
+
+/* Custom subtle scrollbar (vertical only by default, thin and non-intrusive) */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 0px; /* Suppress accidental horizontal scrollbars across cards & inputs */
+}
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+::-webkit-scrollbar-thumb {
+  background: rgba(148, 163, 184, 0.35);
+  border-radius: 9999px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(2, 132, 199, 0.6);
+}
+
+/* Clean sidebar scroll without jarring scrollbar gutters */
+.sidebar-nav-scroll {
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.sidebar-nav-scroll::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}
+
+/* Clean table scroll wrapper - suppress all horizontal scrollbar tracks while retaining touch/trackpad pan */
+.table-clean-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+.table-clean-scroll::-webkit-scrollbar {
+  display: none;
+  width: 0;
+  height: 0;
+}

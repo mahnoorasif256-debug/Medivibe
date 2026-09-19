@@ -1,0 +1,481 @@
+/* MediVibe Component Styles - Modern, High Contrast, Crisp Clinical Aesthetics */
+
+/* 1. Metric & Dashboard Cards */
+.uiverse-card {
+  position: relative;
+  background: var(--bg-glass);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--border-radius-card);
+  box-shadow: var(--shadow-rest);
+  transition: border-color 0.15s ease, box-shadow 0.15s ease;
+  overflow: hidden;
+  contain: paint;
+}
+
+.uiverse-card:hover {
+  border-color: #cbd5e1;
+  box-shadow: 0 2px 8px -2px rgba(15, 23, 42, 0.06);
+}
+
+html.dark .uiverse-card:hover, body.dark .uiverse-card:hover {
+  border-color: #334155;
+  box-shadow: 0 2px 8px -2px rgba(0, 0, 0, 0.3);
+}
+
+/* 2. Standard Crisp Buttons */
+.uiverse-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.5rem 1rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  font-family: inherit;
+  border-radius: 10px;
+  cursor: pointer;
+  transition: background-color 0.15s ease, border-color 0.15s ease, color 0.15s ease;
+  position: relative;
+  user-select: none;
+  border: 1px solid transparent;
+  outline: none;
+  text-decoration: none;
+  white-space: nowrap;
+}
+
+.uiverse-btn:active {
+  opacity: 0.92;
+}
+
+/* Primary Button */
+.uiverse-btn-primary {
+  background: var(--primary-blue);
+  color: #ffffff !important;
+  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+}
+
+html.dark .uiverse-btn-primary {
+  background: var(--primary-blue);
+  color: #ffffff !important;
+}
+
+.uiverse-btn-primary:hover {
+  background: var(--deep-blue);
+}
+
+/* Outline / Secondary Button */
+.uiverse-btn-outline {
+  background: var(--bg-glass);
+  color: var(--text-main);
+  border: 1px solid var(--border-glass);
+  box-shadow: var(--shadow-subtle);
+}
+
+.uiverse-btn-outline:hover {
+  background: rgba(2, 132, 199, 0.06);
+  border-color: var(--primary-blue);
+  color: var(--primary-blue);
+}
+
+html.dark .uiverse-btn-outline:hover {
+  background: rgba(56, 189, 248, 0.1);
+  border-color: var(--primary-blue);
+  color: var(--primary-blue);
+}
+
+/* Success Button */
+.uiverse-btn-success {
+  background: linear-gradient(135deg, #059669 0%, #047857 100%);
+  color: #ffffff !important;
+  box-shadow: 0 2px 8px rgba(5, 150, 105, 0.3);
+}
+
+.uiverse-btn-success:hover {
+  background: linear-gradient(135deg, #047857 0%, #065f46 100%);
+  transform: translateY(-1px);
+}
+
+/* Danger Button */
+.uiverse-btn-danger {
+  background: #fee2e2;
+  color: #b91c1c;
+  border: 1px solid #fca5a5;
+  font-weight: 700;
+}
+
+html.dark .uiverse-btn-danger {
+  background: rgba(239, 68, 68, 0.15);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.3);
+}
+
+.uiverse-btn-danger:hover {
+  background: #ef4444;
+  color: #ffffff;
+  border-color: #ef4444;
+}
+
+/* 3. Uiverse Search Bar */
+.uiverse-input-wrapper {
+  position: relative;
+  display: flex;
+  align-items: center;
+  width: 100%;
+}
+
+.uiverse-input {
+  width: 100%;
+  padding: 0.55rem 1rem 0.55rem 2.4rem;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  font-family: inherit;
+  border-radius: 12px;
+  background-color: var(--bg-glass);
+  border: 1px solid var(--border-glass);
+  color: var(--text-main);
+  outline: none;
+  transition: all 0.2s var(--ease-awwwards);
+  box-shadow: var(--shadow-subtle);
+}
+
+.uiverse-input:focus {
+  border-color: var(--primary-blue);
+  box-shadow: 0 0 0 3px rgba(2, 132, 199, 0.15);
+}
+
+.uiverse-input-icon {
+  position: absolute;
+  left: 0.8rem;
+  pointer-events: none;
+  color: #64748b;
+  width: 1rem;
+  height: 1rem;
+}
+
+/* 4. Uiverse Toggle Switch */
+.uiverse-switch {
+  position: relative;
+  display: inline-block;
+  width: 44px;
+  height: 24px;
+}
+
+.uiverse-switch input {
+  opacity: 0;
+  width: 0;
+  height: 0;
+}
+
+.uiverse-slider {
+  position: absolute;
+  cursor: pointer;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: #cbd5e1;
+  transition: 0.22s var(--ease-awwwards);
+  border-radius: 34px;
+}
+
+html.dark .uiverse-slider {
+  background-color: #334155;
+}
+
+.uiverse-slider:before {
+  position: absolute;
+  content: "";
+  height: 18px;
+  width: 18px;
+  left: 3px;
+  bottom: 3px;
+  background-color: white;
+  transition: 0.22s var(--ease-awwwards);
+  border-radius: 50%;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+}
+
+input:checked + .uiverse-slider {
+  background-color: var(--primary-blue);
+}
+
+input:checked + .uiverse-slider:before {
+  transform: translateX(20px);
+}
+
+/* 5. Uiverse Pulsing Status Dots */
+.uiverse-dot-pulse {
+  position: relative;
+  display: inline-block;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+}
+
+.uiverse-dot-pulse::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  border-radius: 50%;
+  background: inherit;
+  animation: uiversePulse 1.8s cubic-bezier(0.24, 0, 0.38, 1) infinite;
+}
+
+@keyframes uiversePulse {
+  0% {
+    transform: scale(0.95);
+    opacity: 0.8;
+  }
+  70% {
+    transform: scale(2.6);
+    opacity: 0;
+  }
+  100% {
+    transform: scale(2.6);
+    opacity: 0;
+  }
+}
+
+/* 6. Uiverse Status Badges */
+.uiverse-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.375rem;
+  padding: 0.25rem 0.65rem;
+  border-radius: 9999px;
+  font-size: 0.6875rem;
+  font-weight: 700;
+  line-height: 1.2;
+  text-transform: capitalize;
+  white-space: nowrap;
+}
+
+.uiverse-badge-waiting {
+  background: #fef3c7;
+  color: #92400e;
+  border: 1px solid #fde68a;
+}
+html.dark .uiverse-badge-waiting {
+  background: rgba(245, 158, 11, 0.2);
+  color: #fbbf24;
+  border: 1px solid rgba(245, 158, 11, 0.4);
+}
+
+.uiverse-badge-inprogress {
+  background: #e0f2fe;
+  color: #0369a1;
+  border: 1px solid #bae6fd;
+}
+html.dark .uiverse-badge-inprogress {
+  background: rgba(2, 132, 199, 0.2);
+  color: #38bdf8;
+  border: 1px solid rgba(2, 132, 199, 0.4);
+}
+
+.uiverse-badge-completed {
+  background: #d1fae5;
+  color: #065f46;
+  border: 1px solid #a7f3d0;
+}
+html.dark .uiverse-badge-completed {
+  background: rgba(16, 185, 129, 0.2);
+  color: #34d399;
+  border: 1px solid rgba(16, 185, 129, 0.4);
+}
+
+.uiverse-badge-upcoming {
+  background: #ede9fe;
+  color: #5b21b6;
+  border: 1px solid #ddd6fe;
+}
+html.dark .uiverse-badge-upcoming {
+  background: rgba(139, 92, 246, 0.2);
+  color: #a78bfa;
+  border: 1px solid rgba(139, 92, 246, 0.4);
+}
+
+.uiverse-badge-cancelled {
+  background: #fee2e2;
+  color: #991b1b;
+  border: 1px solid #fecaca;
+}
+html.dark .uiverse-badge-cancelled {
+  background: rgba(239, 68, 68, 0.2);
+  color: #f87171;
+  border: 1px solid rgba(239, 68, 68, 0.4);
+}
+
+/* 7. Uiverse Navigation Item & Sidebar Groups */
+.sidebar-section-header {
+  font-size: 0.6875rem;
+  font-weight: 800;
+  text-transform: uppercase;
+  letter-spacing: 0.075em;
+  color: #94a3b8;
+  padding: 0.75rem 0.875rem 0.25rem;
+}
+
+html.dark .sidebar-section-header {
+  color: #64748b;
+}
+
+.uiverse-nav-link {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.625rem;
+  padding: 0.5rem 0.75rem;
+  border-radius: 8px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: #475569;
+  transition: background-color 0.15s ease, color 0.15s ease;
+  cursor: pointer;
+  user-select: none;
+  border: 1px solid transparent;
+}
+
+html.dark .uiverse-nav-link {
+  color: #94a3b8;
+}
+
+.uiverse-nav-link:hover {
+  background: #f1f5f9;
+  color: #0f172a;
+}
+
+html.dark .uiverse-nav-link:hover {
+  background: #1e293b;
+  color: #f8fafc;
+}
+
+.uiverse-nav-link.active {
+  background: rgba(19, 93, 216, 0.1) !important;
+  color: var(--primary-blue) !important;
+  font-weight: 600;
+  box-shadow: none;
+}
+
+html.dark .uiverse-nav-link.active {
+  background: rgba(59, 130, 246, 0.18) !important;
+  color: var(--primary-blue) !important;
+  box-shadow: none;
+}
+
+/* Subtle left accent bar for active item */
+.uiverse-nav-link.active::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 15%;
+  bottom: 15%;
+  width: 3px;
+  border-radius: 0 3px 3px 0;
+  background: var(--primary-blue);
+}
+
+html.dark .uiverse-nav-link.active::before {
+  background: var(--primary-blue);
+}
+
+/* 8. Uiverse Custom Modals */
+.uiverse-modal-backdrop {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.7);
+  backdrop-filter: blur(4px);
+  -webkit-backdrop-filter: blur(4px);
+  z-index: 100;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity 0.2s ease;
+}
+
+.uiverse-modal-backdrop.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.uiverse-modal-content {
+  background: var(--bg-glass);
+  border: 1px solid var(--border-glass);
+  border-radius: var(--border-radius-card);
+  width: 100%;
+  max-width: 580px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 25px 50px -12px rgba(15, 23, 42, 0.35);
+  transform: scale(0.96) translateY(8px);
+  transition: transform 0.2s ease;
+}
+
+.uiverse-modal-backdrop.open .uiverse-modal-content {
+  transform: scale(1) translateY(0);
+}
+
+/* 9. Uiverse Pill Filter */
+.uiverse-pill-filter {
+  padding: 0.35rem 0.85rem;
+  font-size: 0.75rem;
+  font-weight: 700;
+  font-family: inherit;
+  border-radius: 9999px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  border: 1px solid var(--border-glass);
+  background: var(--bg-glass);
+  color: var(--text-muted);
+}
+
+.uiverse-pill-filter:hover {
+  color: var(--text-main);
+  border-color: var(--primary-blue);
+  background: rgba(2, 132, 199, 0.05);
+}
+
+html.dark .uiverse-pill-filter:hover {
+  color: #f8fafc;
+  background: rgba(56, 189, 248, 0.1);
+  border-color: var(--primary-blue);
+}
+
+.uiverse-pill-filter.active {
+  background: linear-gradient(135deg, var(--primary-blue) 0%, var(--deep-blue) 100%) !important;
+  color: #ffffff !important;
+  border-color: transparent !important;
+  box-shadow: 0 4px 12px rgba(19, 93, 216, 0.25);
+}
+
+/* 10. Toast Notifications */
+.uiverse-toast {
+  position: fixed;
+  bottom: 1.5rem;
+  right: 1.5rem;
+  padding: 0.75rem 1.15rem;
+  border-radius: 12px;
+  background: #0f172a;
+  color: #ffffff;
+  box-shadow: 0 10px 25px -5px rgba(15, 23, 42, 0.4);
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-size: 0.8125rem;
+  font-weight: 600;
+  z-index: 999;
+  transform: translateY(100px);
+  opacity: 0;
+  transition: all 0.25s cubic-bezier(0.16, 1, 0.3, 1);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+.uiverse-toast.show {
+  transform: translateY(0);
+  opacity: 1;
+}

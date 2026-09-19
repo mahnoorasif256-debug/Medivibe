@@ -1,0 +1,6 @@
+{
+  "name": "MediVibe",
+  "description": "MediVibe Doctor Clinic Portal — intelligent clinical management, live patient queue, electronic health records (EHR), telehealth suite, and digital prescriptions.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}

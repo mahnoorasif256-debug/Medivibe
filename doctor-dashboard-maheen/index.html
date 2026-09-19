@@ -1,0 +1,114 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>MediVibe</title>
+    <meta name="description" content="MediVibe Doctor Clinic Portal — intelligent clinical management, live patient queue, electronic health records (EHR), telehealth suite, and digital prescriptions." />
+    <meta property="og:title" content="MediVibe" />
+    <meta property="og:description" content="MediVibe Doctor Clinic Portal — intelligent clinical management, live patient queue, electronic health records (EHR), telehealth suite, and digital prescriptions." />
+    <meta property="og:type" content="website" />
+    <meta name="twitter:card" content="summary_large_image" />
+
+    <!-- Google Font: Plus Jakarta Sans -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;1,400&display=swap" rel="stylesheet">
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="./src/index.css" />
+    <link rel="stylesheet" href="./src/styles/uiverse.css" />
+
+    <!-- Circular Structure Protection for Telemetry, Console, & Dev Proxies -->
+    <script>
+      (function() {
+        const originalStringify = JSON.stringify;
+        JSON.stringify = function(value, replacer, space) {
+          try {
+            return originalStringify(value, replacer, space);
+          } catch (err) {
+            if (err instanceof TypeError && String(err.message).toLowerCase().includes('circular')) {
+              const seen = new WeakSet();
+              try {
+                return originalStringify(value, function(k, v) {
+                  if (typeof v === 'object' && v !== null) {
+                    if (seen.has(v)) return '[Circular]';
+                    seen.add(v);
+                  }
+                  if (typeof replacer === 'function') return replacer(k, v);
+                  return v;
+                }, space);
+              } catch (_) {
+                return String(value);
+              }
+            }
+            throw err;
+          }
+        };
+      })();
+    </script>
+
+    <!-- Tailwind CSS (Play CDN with custom theme config matching user variables) -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            colors: {
+              'primary-blue': 'var(--primary-blue)',
+              'navy-dark': 'var(--navy-dark)',
+              'deep-blue': 'var(--deep-blue)',
+              'text-main': 'var(--text-main)',
+              'text-muted': 'var(--text-muted)',
+              'bg-page': 'var(--bg-page)',
+              'bg-glass': 'var(--bg-glass)',
+              'border-glass': 'var(--border-glass)',
+            },
+            fontFamily: {
+              sans: ['"Plus Jakarta Sans"', '-apple-system', 'BlinkMacSystemFont', 'sans-serif'],
+            },
+            borderRadius: {
+              'card': 'var(--border-radius-card)',
+            },
+            boxShadow: {
+              'rest': 'var(--shadow-rest)',
+            }
+          }
+        }
+      }
+    </script>
+
+    <!-- Immediate theme check before DOM render -->
+    <script>
+      (function() {
+        const savedTheme = localStorage.getItem('medivibe-theme') || localStorage.getItem('vitacare-theme');
+        if (savedTheme === 'dark') {
+          document.documentElement.classList.add('dark');
+        } else {
+          document.documentElement.classList.remove('dark');
+        }
+      })();
+    </script>
+
+    <!-- GSAP Animation Library -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+
+    <!-- Native Browser ES Module Import Map (Runs without any bundler/vite/ts) -->
+    <script type="importmap">
+    {
+      "imports": {
+        "gsap": "https://cdn.jsdelivr.net/npm/gsap@3.12.5/+esm",
+        "firebase/app": "https://www.gstatic.com/firebasejs/10.13.0/firebase-app.js",
+        "firebase/firestore": "https://www.gstatic.com/firebasejs/10.13.0/firebase-firestore.js"
+      }
+    }
+    </script>
+  </head>
+  <body>
+    <div id="root"></div>
+    
+    <!-- Production Standalone Bundle: Works on file:/// local double-click, Vercel, and GitHub Pages -->
+    <script src="./bundle.js"></script>
+  </body>
+</html>

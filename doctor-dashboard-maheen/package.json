@@ -1,0 +1,18 @@
+{
+  "name": "medivibe-clinic-portal",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "scripts": {
+    "dev": "node server.js",
+    "start": "node server.js",
+    "build": "node build.js",
+    "lint": "node --check server.js build.js src/main.js src/icons.js src/components/uiverse.js src/components/modals.js src/views/dashboard.js src/views/appointments.js src/views/consultations.js src/views/patients.js src/views/prescriptions.js src/views/schedule.js src/views/invoices.js src/views/requests.js src/views/settings.js"
+  },
+  "dependencies": {
+    "esbuild": "^0.28.2",
+    "express": "^4.21.2",
+    "firebase": "^12.19.0",
+    "gsap": "^3.15.0"
+  }
+}
