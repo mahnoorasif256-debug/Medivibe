@@ -334,7 +334,7 @@ formLogin.addEventListener("submit", async (e) => {
                 return;
             }
 
-            window.location.href = "doctor-dashboard.html";
+            window.location.href = "./doctor-dashboard-maheen/index.html";
 
         } else if (activeRole === "PATIENT") {
             if (userData.role !== "PATIENT") {
