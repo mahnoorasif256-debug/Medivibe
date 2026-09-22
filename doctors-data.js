@@ -1,4 +1,4 @@
-﻿/* MediVibe Hospital - Doctors data (from gallery.html) */
+﻿/* MediVibe Hospital - Doctors data (from ../doctor-page/../doctor-page/../doctor-page/../doctor-page/../doctor-page/gallery.html) */
 
 window.MV = window.MV || {};
 window.MV.DOCTORS = [
