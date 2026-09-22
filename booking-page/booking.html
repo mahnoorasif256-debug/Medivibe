@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Appointment</title>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="booking.css">
+</head>
+<body>
+
+<div class="contact-page-wrapper">
+
+    <!-- HERO BANNER -->
+    <div class="page-banner">
+        <div class="banner-bg"></div>
+        <div class="banner-overlay"></div>
+        <div class="banner-content">
+            <span class="banner-badge"><i class="fa-solid fa-sparkles"></i> Instant Confirmation</span>
+            <h1>Book Your <span class="highlight">Appointment</span></h1>
+            <p>Select your specialist, preferred date, and available time slot in real-time.</p>
+            <div class="breadcrumb-nav">
+                <a href="index.html">Home</a>
+                <span>/</span>
+                <span class="current">Appointment</span>
+            </div>
+        </div>
+    </div>
+
+    <!-- MAIN APPOINTMENT GRID -->
+    <div class="appointment-split-section">
+
+        <!-- LEFT PANEL: SELECTION STEPS -->
+        <div class="appointment-card left-card">
+            <div class="card-header-glow"></div>
+
+            <!-- 1. DOCTOR SELECTION -->
+            <section class="booking-section">
+                <div class="section-header-inline">
+                    <h3 class="section-label"><i class="fa-solid fa-user-doctor icon-blue"></i> Select Doctor</h3>
+                    <span class="section-sub-tag">3 Specialists Available</span>
+                </div>
+                <div class="doctor-grid" id="doctorContainer">
+                    <div class="doctor-chip active" data-name="Dr. Sarah Johnson" data-spec="Cardiologist" data-fee="3500">
+                        <div class="doc-avatar-wrap">
+                            <div class="doc-avatar"><i class="fa-solid fa-user-md"></i></div>
+                            <span class="online-indicator"></span>
+                        </div>
+                        <div class="doc-info">
+                            <h4>Dr. Sarah Johnson</h4>
+                            <p>Cardiologist</p>
+                            <span class="fee-tag">Rs. 3,500</span>
+                        </div>
+                        <i class="fa-solid fa-circle-check check-icon"></i>
+                    </div>
+
+                    <div class="doctor-chip" data-name="Dr. Ali Hassan" data-spec="Neurologist" data-fee="4000">
+                        <div class="doc-avatar-wrap">
+                            <div class="doc-avatar"><i class="fa-solid fa-user-md"></i></div>
+                            <span class="online-indicator"></span>
+                        </div>
+                        <div class="doc-info">
+                            <h4>Dr. Ali Hassan</h4>
+                            <p>Neurologist</p>
+                            <span class="fee-tag">Rs. 4,000</span>
+                        </div>
+                        <i class="fa-solid fa-circle-check check-icon"></i>
+                    </div>
+
+                    <div class="doctor-chip" data-name="Dr. Ayesha Malik" data-spec="Dermatologist" data-fee="3000">
+                        <div class="doc-avatar-wrap">
+                            <div class="doc-avatar"><i class="fa-solid fa-user-md"></i></div>
+                            <span class="online-indicator"></span>
+                        </div>
+                        <div class="doc-info">
+                            <h4>Dr. Ayesha Malik</h4>
+                            <p>Dermatologist</p>
+                            <span class="fee-tag">Rs. 3,000</span>
+                        </div>
+                        <i class="fa-solid fa-circle-check check-icon"></i>
+                    </div>
+                </div>
+            </section>
+
+            <!-- 2. DATE SELECTION -->
+            <section class="booking-section">
+                <div class="section-header-inline">
+                    <h3 class="section-label"><i class="fa-regular fa-calendar-days icon-blue"></i> Select Date</h3>
+                    <span class="month-indicator" id="currentMonthYear">Sep 2026</span>
+                </div>
+                <div class="date-pills-wrapper" id="dateContainer">
+                    <!-- Dynamic Date Pills via JS -->
+                </div>
+            </section>
+
+            <!-- 3. TIME SLOT SELECTION -->
+            <section class="booking-section">
+                <h3 class="section-label"><i class="fa-regular fa-clock icon-blue"></i> Select Available Slot</h3>
+                <div class="time-slots-grid" id="timeContainer">
+                    <button type="button" class="time-chip">08:00 - 09:00 AM</button>
+                    <button type="button" class="time-chip active">10:00 - 11:00 AM</button>
+                    <button type="button" class="time-chip">11:00 - 12:00 AM</button>
+                    <button type="button" class="time-chip">04:00 - 05:00 PM</button>
+                    <button type="button" class="time-chip">05:00 - 06:00 PM</button>
+                    <button type="button" class="time-chip">06:00 - 07:00 PM</button>
+                    <button type="button" class="time-chip">07:00 - 08:00 PM</button>
+                </div>
+            </section>
+
+            <!-- 4. PATIENT DETAILS -->
+            <section class="booking-section">
+                <h3 class="section-label"><i class="fa-solid fa-address-card icon-blue"></i> Patient Information</h3>
+                
+                <div class="inputs-stack">
+                    <div class="input-group">
+                        <i class="fa-solid fa-user input-icon"></i>
+                        <input type="text" id="patientName" placeholder=" " value="Maheen Imran" required />
+                        <label for="patientName">Patient Full Name</label>
+                    </div>
+
+                    <div class="input-group">
+                        <i class="fa-solid fa-phone input-icon"></i>
+                        <input type="tel" id="patientPhone" placeholder=" " value="03001234567" required />
+                        <label for="patientPhone">Mobile Number</label>
+                    </div>
+
+                    <div class="input-group">
+                        <i class="fa-solid fa-notes-medical input-icon"></i>
+                        <input type="text" id="patientNotes" placeholder=" " value="Routine Checkup / Fever" />
+                        <label for="patientNotes">Medical Issue / Medical Notes</label>
+                    </div>
+                </div>
+
+                <div class="home-visit-toggle">
+                    <label class="checkbox-container">
+                        <input type="checkbox" id="homeServiceCheck">
+                        <span class="checkmark"></span>
+                        <span class="toggle-text">
+                            <strong>Collect samples from home / Home Visit</strong>
+                            <small>Additional charges: Rs. 500</small>
+                        </span>
+                    </label>
+                </div>
+            </section>
+
+            <!-- 5. FAMILY MEMBER TOGGLES -->
+            <section class="booking-section">
+                <h3 class="section-label"><i class="fa-solid fa-user-group icon-blue"></i> Book For Family Member</h3>
+                <div class="family-switches">
+                    <div class="switch-row">
+                        <div class="switch-label-info">
+                            <strong>Book for Myself</strong>
+                            <small>Primary account holder</small>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" id="bookSelf" checked>
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                    <div class="switch-row">
+                        <div class="switch-label-info">
+                            <strong>Book for Relative / Dependent</strong>
+                            <small>Family member or friend</small>
+                        </div>
+                        <label class="switch">
+                            <input type="checkbox" id="bookRelative">
+                            <span class="slider round"></span>
+                        </label>
+                    </div>
+                </div>
+            </section>
+
+        </div>
+
+        <!-- RIGHT PANEL: SUMMARY CARD -->
+        <div class="appointment-card right-card">
+            <div class="card-header-glow"></div>
+            
+            <div class="summary-header">
+                <h2>Booking Summary</h2>
+                <span class="status-live-tag"><span class="pulse-dot"></span> Live Estimate</span>
+            </div>
+
+            <div class="summary-body">
+                <div class="summary-item">
+                    <div class="item-info">
+                        <span class="item-title" id="summaryDoctor">Dr. Sarah Johnson</span>
+                        <span class="item-sub" id="summarySpec">Cardiologist - Consultation</span>
+                    </div>
+                    <div class="item-price" id="summaryDoctorPrice">Rs. 3,500/-</div>
+                </div>
+
+                <div class="summary-item" id="homeServiceRow" style="display: none;">
+                    <div class="item-info">
+                        <span class="item-title">Home Visit Charges</span>
+                        <span class="item-sub">Doorstep sample collection</span>
+                    </div>
+                    <div class="item-price">Rs. 500/-</div>
+                </div>
+
+                <div class="divider"></div>
+
+                <div class="summary-info-box">
+                    <span class="box-label"><i class="fa-solid fa-location-dot"></i> Test / Clinic Center</span>
+                    <strong>Main Health Complex</strong>
+                    <p>Phase 2, Healthcare City, Suite 402</p>
+                    <span class="status-chip-inline"><i class="fa-solid fa-shield-halved"></i> Verified Health Center</span>
+                </div>
+
+                <div class="summary-info-box">
+                    <span class="box-label"><i class="fa-regular fa-clock"></i> Scheduled Date & Time</span>
+                    <strong class="highlight-time" id="summaryDateTime">10:00 AM, Wed 16 Sep 2026</strong>
+                </div>
+
+                <div class="summary-info-box">
+                    <span class="box-label"><i class="fa-solid fa-user"></i> Patient Name / Tag</span>
+                    <strong id="summaryPatientDisplayName">Maheen Imran</strong>
+                    <div class="patient-pill-group">
+                        <span class="patient-pill" id="summaryPatientTag">Self</span>
+                    </div>
+                </div>
+
+                <div class="total-row">
+                    <div class="total-label">
+                        <span>Total Payable</span>
+                        <small>All taxes included</small>
+                    </div>
+                    <strong class="total-price" id="summaryTotal">Rs. 3,500/-</strong>
+                </div>
+
+                <button class="submit-glow-btn" id="btnConfirmBooking">
+                    <div class="inner">
+                        <span>Proceed to Pay & Confirm</span>
+                        <svg class="icon" viewBox="0 0 24 24">
+                            <path d="M5 12h14M12 5l7 7-7 7" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>
+                    </div>
+                </button>
+
+                <div class="support-box">
+                    <div class="call-icon"><i class="fa-solid fa-headset"></i></div>
+                    <div class="support-text">
+                        <span>Have questions?</span>
+                        <strong>+92 300 000 0000</strong>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+</div>
+
+<!-- CONFIRMATION RECEIPT MODAL -->
+<div class="modal-overlay" id="receiptModal">
+    <div class="receipt-card">
+        <button class="close-btn" id="closeModalBtn">&times;</button>
+        <div class="receipt-header">
+            <div class="success-icon"><i class="fa-solid fa-check"></i></div>
+            <span class="status-badge-green"><i class="fa-solid fa-circle-check"></i> CONFIRMED APPOINTMENT</span>
+            <h2>Appointment Receipt</h2>
+        </div>
+        <div class="receipt-body">
+            <div class="receipt-row">
+                <span>Patient Name</span>
+                <strong id="rcptPatientName">-</strong>
+            </div>
+            <div class="receipt-row">
+                <span>Contact Number</span>
+                <strong id="rcptPhone">-</strong>
+            </div>
+            <div class="receipt-row">
+                <span>Patient Notes</span>
+                <strong id="rcptNotes">-</strong>
+            </div>
+            <div class="receipt-divider"></div>
+            <div class="receipt-row">
+                <span>Doctor Name</span>
+                <strong id="rcptDoctor">-</strong>
+            </div>
+            <div class="receipt-row">
+                <span>Specialization</span>
+                <strong id="rcptSpec">-</strong>
+            </div>
+            <div class="receipt-row">
+                <span>Date & Day</span>
+                <strong id="rcptDate">-</strong>
+            </div>
+            <div class="receipt-row">
+                <span>Timing Slot</span>
+                <strong id="rcptTime">-</strong>
+            </div>
+            <div class="receipt-row">
+                <span>Booking Type</span>
+                <strong id="rcptBookedFor">-</strong>
+            </div>
+            <div class="receipt-divider"></div>
+            <div class="receipt-row total-row-modal">
+                <span>Total Amount Paid</span>
+                <strong id="rcptAmount">-</strong>
+            </div>
+        </div>
+        <div class="receipt-footer">
+            <button class="print-btn" onclick="window.print()"><i class="fa-solid fa-print"></i> Print Receipt</button>
+        </div>
+    </div>
+</div>
+
+<script type="module" src="booking.js"></script>
+</body>
+</html>
