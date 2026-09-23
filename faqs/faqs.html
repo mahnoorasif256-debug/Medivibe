@@ -6,12 +6,104 @@
     <title>Hospital Help & FAQs</title>
     <!-- Remixicon CDN -->
     <link href="https://cdn.jsdelivr.net/npm/remixicon@3.5.0/fonts/remixicon.css" rel="stylesheet">
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
     <!-- Main Style Sheet -->
     <link rel="stylesheet" href="faqs.css">
     <!-- GSAP CDN -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 </head>
 <body>
+
+    <nav class="navbar navbar-expand-lg top">
+        <div class="container-lg">
+            <a class="navbar-brand p-0" href="#">
+                <p class="text-white para mt-1" style="font-size: 14px;"><i class="fa-regular fa-envelope"></i> info@medivibe.com</p>
+            </a>
+
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                    <li class="nav-item">
+                        <a class="nav-link active fs-6 text" aria-current="page" href="#">
+                            <p class="text-white mt-3" style="font-size: 14px;"><i class="fa-solid fa-mobile-screen"></i> +(333) 052 39876</p>
+                        </a>
+                    </li>
+                </ul>
+
+                <ul class="navbar-nav mt-2 mb-lg-0 icons">
+                    <li class="nav-item"><a class="social-icon-link" aria-current="page" href="#"><i class="fa-brands fa-facebook-f"></i></a></li>
+                    <li class="nav-item"><a class="social-icon-link" aria-current="page" href="#"><i class="fa-brands fa-twitter"></i></a></li>
+                    <li class="nav-item"><a class="social-icon-link" aria-current="page" href="#"><i class="fa-brands fa-instagram"></i></a></li>
+                    <li class="nav-item"><a class="social-icon-link" aria-current="page" href="#"><i class="fa-brands fa-pinterest"></i></a></li>
+                    <li class="nav-item"><a class="social-icon-link" aria-current="page" href="#"><i class="fa-brands fa-linkedin-in"></i></a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <nav class="navbar navbar-expand-lg my-nav">
+        <div class="container-lg">
+            <a class="navbar-brand" href="../index.html"><img src="../images/logo.png.png" alt="MediVibe Logo" class="nav-logo"></a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mx-auto gap-3 mb-2 mb-lg-0">
+                    <li class="nav-item ms-3"><a class="nav-link active m-2 fw-medium" aria-current="page" href="../index.html">Home</a></li>
+                    <li class="nav-item"><a class="nav-link m-2 fw-medium" aria-current="page" href="../about-us/about.html">About</a></li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link m-2 fw-medium custom-dropdown-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Services
+                            <i class="fas fa-plus dropdown-icon"></i>
+                        </a>
+                        <ul class="dropdown-menu animate slideIn" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="../services/services.html">Services</a></li>
+                            <li><a class="dropdown-item" href="../services/services.html#services-details">Services Details</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item dropdown">
+                        <a class="nav-link m-2 fw-medium custom-dropdown-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Doctors
+                            <i class="fas fa-plus dropdown-icon"></i>
+                        </a>
+                        <ul class="dropdown-menu animate slideIn" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="../html/doctors.html">Doctors</a></li>
+                            <li><a class="dropdown-item" href="../html/doctor1.html">Doctors Details</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item plus dropdown">
+                        <a class="nav-link m-2 fw-medium custom-dropdown-link" href="#" id="navbarDropdown" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Pages
+                            <i class="fas fa-plus ic dropdown-icon"></i>
+                        </a>
+                        <ul class="dropdown-menu animate slideIn" aria-labelledby="navbarDropdown">
+                            <li><a class="dropdown-item" href="faqs.html">FAQs</a></li>
+                            <li><a class="dropdown-item" href="../features/features.html">Features</a></li>
+                            <li><a class="dropdown-item" href="../booking-page/booking.html">Appointment</a></li>
+                            <li><a class="dropdown-item" href="../errorpage/errpage.html">404 Page</a></li>
+                        </ul>
+                    </li>
+
+                    <li class="nav-item"><a class="nav-link m-2 fw-medium" aria-current="page" href="../conpage/ano.html">Contact Us</a></li>
+                </ul>
+                <div class="header-cta-buttons d-flex align-items-center">
+                    <button class="custom-gradient-btn text-center fw-medium" type="submit">
+                        <span>Sign Up</span>
+                        <span class="btn-arrow-circle"><i class="fa-solid fa-chevron-right"></i></span>
+                    </button>
+                    <button class="text-center btn-signin fw-medium ms-5" type="submit">
+                        <span>Log In</span>
+                        <span class="btn-arrow-circle"><i class="fa-solid fa-chevron-right"></i></span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </nav>
 
     <main class="faq-container">
         <!-- Header Section -->
@@ -89,6 +181,8 @@
         </div>
     </main>
 
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.8/dist/js/bootstrap.min.js"></script>
     <script src="faqs.js"></script>
 </body>
 </html>
