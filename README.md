@@ -1,2 +1,1 @@
-# Medivibe
-team-project 
+This is team project
